@@ -1,0 +1,57 @@
+extends includes/master
+
+block vars
+	- var script = 1;
+	- var css = 0;
+	- var title = 'Landing Zuma';
+	- var plugins = 0;
+
+block content
+	.page1
+		.page1__main
+			.portlet(data-portlet="zuma")
+
+
+
+				.section4(data-section) 
+					.section4__main 
+						hgroup 
+							h2 ¡ENCUÉNTRANOS EN TIENDAS Y SUPERMERCADOS!
+
+				.section5(data-section) 
+					.section5__main 
+						.section5__main__stores
+							.section5__main__stores__item.c 
+								img(src="/assets/logos/logo1.png" alt="")
+							.section5__main__stores__item.c
+								img(src="/assets/logos/logo2.png" alt="")
+							.section5__main__stores__item 
+								img(src="/assets/logos/logo3.png" alt="")
+							.section5__main__stores__item.b 
+								img(src="/assets/logos/logo4.png" alt="")
+							.section5__main__stores__item 
+								img(src="/assets/logos/logo5.png" alt="")
+
+
+
+
+
+
+
+
+
+
+
+
+block plugins
+
+
+block css
+
+	//- link(rel='stylesheet' type='text/css' href=path+'components/menufix/menufix.css' charset="utf-8")
+
+
+block javascript
+
+	script(type='text/javascript' src= path+'js/library/slick.js')
+	script(type='text/javascript' src=path+"js/common.js")

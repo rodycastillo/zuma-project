@@ -1,0 +1,87 @@
+@-webkit-keyframes no-transform {
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes no-transform {
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.a-fade {
+  -webkit-animation: no-transform 0.5s both;
+          animation: no-transform 0.5s both;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  opacity: 0;
+}
+
+.a-pop-up {
+  -webkit-animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+  -webkit-transform: translateY(-6rem) scale(0.8);
+  transform: translateY(-6rem) scale(0.8);
+}
+
+.a-pop-down {
+  -webkit-animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+  -webkit-transform: translateY(6rem) scale(0.8);
+  transform: translateY(6rem) scale(0.8);
+}
+
+.a-pop-right {
+  -webkit-animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+  -webkit-transform: translateX(6rem) scale(0.8);
+  transform: translateX(6rem) scale(0.8);
+}
+
+.a-pop-left {
+  -webkit-animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+  -webkit-transform: translateX(-6rem) scale(0.8);
+  transform: translateX(-6rem) scale(0.8);
+}
+
+.a-up {
+  -webkit-animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+  -webkit-transform: translateY(-6rem);
+  transform: translateY(-6rem);
+}
+
+.a-down {
+  -webkit-animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+  -webkit-transform: translateY(6rem);
+  transform: translateY(6rem);
+}
+
+.a-left {
+  -webkit-animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+  -webkit-transform: translateX(-6rem);
+  transform: translateX(-6rem);
+}
+
+.a-right {
+  -webkit-animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+  -webkit-transform: translateX(6rem);
+  transform: translateX(6rem);
+}
