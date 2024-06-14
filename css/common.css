@@ -14,8 +14,8 @@
   src: url("../fonts/Gotham-Book.eot?") format("eot"), url("../fonts/Gotham-Book.woff2") format("woff2"), url("../fonts/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book.ttf") format("truetype"), url("../fonts/Gotham-Book.svg#Gotham-Book") format("svg");
 }
 @font-face {
-  font-family: "AMX-Medium";
-  src: url("../fonts/AMX-Medium.eot?") format("eot"), url("../fonts/AMX-Medium.woff2") format("woff2"), url("../fonts/AMX-Medium.woff") format("woff"), url("../fonts/AMX-Medium.ttf") format("truetype"), url("../fonts/AMX-Medium.svg#AMX-Medium") format("svg");
+  font-family: "Gotham-Black";
+  src: url("../fonts/Gotham Black Regular.eot?") format("eot"), url("../fonts/Gotham Black Regular.woff2") format("woff2"), url("../fonts/Gotham Black Regular.woff") format("woff"), url("../fonts/Gotham Black Regular.ttf") format("truetype"), url("../fonts/Gotham Black Regular.svg#Gotham-Black") format("svg");
 }
 @font-face {
   font-family: "AMX-Bold";
@@ -466,413 +466,118 @@ video {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.portlet[data-portlet=zuma] .section[data-section] {
-  width: 100%;
-  background-image: url("https://www.claro.com.pe/assets/havas/landing-deportes/liga1/assets/general/background-desktop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-  padding: 50px 0 100px;
-  position: relative;
+.portlet[data-portlet=zuma] .section3[data-section] {
+  padding-bottom: 80px;
+  padding-top: 2rem;
 }
-.portlet[data-portlet=zuma] .section[data-section]:before {
-  position: absolute;
-  content: "";
-  width: 160px;
-  height: 160px;
-  background-image: url("https://www.claro.com.pe/assets/havas/landing-deportes/liga2/assets/general/ball__small.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  -webkit-animation: rotating 3s linear infinite;
-          animation: rotating 3s linear infinite;
-  top: 226px;
-  left: -50px;
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section3[data-section] {
+    padding-bottom: 30px;
+  }
+}
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main {
+  width: 100%;
+}
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main hgroup h2 {
+  font: normal 400 44px "Gotham-Black";
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main hgroup h2 {
+    font-size: 20px;
+    line-height: 50px;
+  }
+}
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main hgroup p {
+  font: normal 400 16px "Roboto";
+  line-height: 26px;
+  color: #fff;
+  max-width: 990px;
+  text-align: left;
+  margin: 49px auto 0;
 }
 @media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section]:before {
-    width: 74.104px;
-    height: 74.104px;
-    right: 25px;
-    top: -40px;
-    left: auto;
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main hgroup p {
+    max-width: 90%;
   }
 }
 @media screen and (max-width: 640px) {
-  .portlet[data-portlet=zuma] .section[data-section]:before {
-    width: 48px;
-    height: 48px;
-    right: 25px;
-    top: -10px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section]:after {
-  position: absolute;
-  content: "";
-  width: 160px;
-  height: 160px;
-  background-image: url("https://www.claro.com.pe/assets/havas/landing-deportes/liga2/assets/general/ball__small.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  -webkit-animation: rotating 3s linear infinite;
-          animation: rotating 3s linear infinite;
-  bottom: 226px;
-  right: -80px;
-}
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section]:after {
-    display: none;
-  }
-}
-@-webkit-keyframes rotating {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes rotating {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] {
-    padding: 50px 0;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__header {
-  width: 90%;
-  max-width: 1420px;
-  margin: 0 auto;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 8px;
-  margin-bottom: 32px;
-}
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__header {
-    max-width: 1252px;
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main hgroup p {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 285px;
     width: 90%;
+    margin-top: 10px;
   }
 }
-.portlet[data-portlet=zuma] .section[data-section] .section__header__icon {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none"><g clip-path="url(%23clip0_2618_55011)"><path d="M6 0.499999L1.472e-06 11.4773L6 22.5L18 22.5L24 11.4773L18 0.5L6 0.499999Z" fill="%23DA291C"/></g><defs><clipPath id="clip0_2618_55011"><rect width="22" height="24" fill="white" transform="translate(24 0.5) rotate(90)"/></clipPath></defs></svg>');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-  width: 22px;
-  height: 24px;
-}
-@media screen and (max-width: 640px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__header__icon {
-    width: 16px;
-    height: 18px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__header__title {
-  font: normal 700 32px "Gotham-Bold";
-  line-height: normal;
-  color: #000;
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
+  width: 1191px;
+  height: 670px;
+  margin: 64px auto 0;
+  max-width: 90%;
 }
 @media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__header__title {
-    font-size: 22px;
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
+    height: auto;
   }
 }
 @media screen and (max-width: 640px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__header__title {
-    font-size: 18px;
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 30px;
+    width: 285px;
+    min-height: 433px;
   }
 }
-.portlet[data-portlet=zuma] .section[data-section] .section__tabs {
-  width: 456px;
-  margin: 0 auto;
-  height: 55px;
-  border-radius: 61px;
-  background: #C5261A;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  position: relative;
-}
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__tabs {
-    width: 360px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__tabs {
-    width: 348px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__tabs .glider {
-  display: block;
-  position: absolute;
-  width: 50%;
-  left: 0;
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main__video video {
+  width: 100%;
   height: 100%;
-  background-color: #fff;
-  border-radius: 50px;
-  -webkit-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.25);
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  z-index: 10;
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__tabs li {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 102%;
-  color: #fff;
-  border-radius: 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  cursor: pointer;
-  gap: 8px;
-  position: relative;
-  z-index: 11;
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__tabs li.active .ball {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__tabs li.active .text {
-  font: normal 700 20px "Gotham-Bold";
-  color: #C5261A;
-}
-@media screen and (max-width: 640px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__tabs li.active .text {
-    font-size: 18px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__tabs li .ball {
-  display: none;
-  width: 24px;
-  height: 24px;
-  background-image: url("https://www.claro.com.pe/assets/havas/landing-deportes/liga2/assets/general/ball__small.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  -webkit-animation: rotating 3s linear infinite;
-          animation: rotating 3s linear infinite;
-}
-@media screen and (max-width: 640px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__tabs li .ball {
-    width: 20px;
-    height: 20px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__tabs li .text {
-  font: normal 700 20px "AMX-Regular";
-  line-height: 20px;
-}
-@media screen and (max-width: 640px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__tabs li .text {
-    font-size: 18px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__views {
-  width: 1080px;
-  margin: 50px auto 0;
-}
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__views {
-    width: 90%;
-  }
-}
-@media screen and (max-width: 640px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__views {
-    width: 100%;
-    padding-left: 5%;
-    overflow-x: scroll;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__views::-webkit-scrollbar {
-  display: none;
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__view {
-  width: 100%;
-  display: none;
-}
-@media screen and (max-width: 640px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__view {
-    width: 700px;
-    padding-right: 5%;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__view.active {
-  display: block;
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__view__header {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 71px;
-  border-radius: 20px;
-  background: -webkit-gradient(linear, right top, left top, from(#821911), color-stop(53.13%, #DA291C), to(#8D1B13));
-  background: linear-gradient(270deg, #821911 0%, #DA291C 53.13%, #8D1B13 100%);
-  overflow: hidden;
-}
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__view__header {
-    height: 55px;
-    border-radius: 10px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__view__header li {
-  font: normal 700 18px "Gotham-Bold";
-  color: #fff;
-  text-align: center;
-  width: 90px;
-  display: block;
-}
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__view__header li {
-    font-size: 13px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__view__header li:nth-child(1) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 290px;
-}
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__view__header li:nth-child(1) {
-    width: 190px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__view__header li:last-child {
-  width: 95px;
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__view__item {
-  width: 100%;
-  height: 74px;
-  background-color: #fff;
-  border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 16px;
-}
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__view__item {
-    height: 55px;
-    margin-top: 12px;
-    border-radius: 10px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__view__item li {
-  font: normal 400 18px "AMX-Regular";
-  color: #000;
-  text-align: center;
-  width: 90px;
-  display: block;
-}
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__view__item li {
-    font-size: 13px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__view__item li:nth-child(1) {
-  width: 290px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 19px;
-  font-family: "Gotham-Bold";
-}
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__view__item li:nth-child(1) {
-    gap: 10px;
-    width: 190px;
-  }
-}
-.portlet[data-portlet=zuma] .section[data-section] .section__view__item li:nth-child(1) img {
-  width: 34px;
-  height: 34px;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
 }
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__view__item li:nth-child(1) img {
-    width: 31.395px;
-    height: 31.395px;
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main__video video.desktop {
+  display: block;
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video video.desktop {
+    display: none;
   }
 }
-.portlet[data-portlet=zuma] .section[data-section] .section__view__item li:nth-child(1) span {
-  width: 190px;
-  text-wrap: wrap;
-  text-align: left;
-  text-transform: uppercase;
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main__video video.mobile {
+  display: none;
 }
-@media screen and (max-width: 1024px) {
-  .portlet[data-portlet=zuma] .section[data-section] .section__view__item li:nth-child(1) span {
-    width: 70px;
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video video.mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
-.portlet[data-portlet=zuma] .section[data-section] .section__view__item li:last-child {
-  width: 95px;
-  font-family: "Gotham-Bold";
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main__resources {
+  width: 660.759px;
+  height: 66.471px;
+  margin: 64px auto 0;
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main__resources {
+    width: 310.613px;
+    height: 36.034px;
+    max-width: 90%;
+    margin-top: 30px;
+  }
+}
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main__resources img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 .portlet[data-portlet=zuma] .section4[data-section] {
   height: 466px;
@@ -922,7 +627,7 @@ video {
 .portlet[data-portlet=zuma] .section4[data-section] .section4__main hgroup h2 {
   color: #fff;
   text-align: center;
-  font: normal 500 44px "Gotham-Bold";
+  font: normal 500 44px "Gotham-Black";
   line-height: 62px;
   text-transform: uppercase;
 }
@@ -989,6 +694,11 @@ video {
       flex-wrap: wrap;
   gap: 109px;
 }
+@media screen and (max-width: 1024px) {
+  .portlet[data-portlet=zuma] .section5[data-section] .section5__main__stores {
+    gap: 50px;
+  }
+}
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section5[data-section] .section5__main__stores {
     gap: 10px;
@@ -998,11 +708,11 @@ video {
   width: 127px;
   height: 127px;
   border-radius: 100%;
-  margin: 0 20px;
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section5[data-section] .section5__main__stores__item {
     width: 56px;
+    margin: 0 20px;
     height: 56px;
   }
 }
@@ -1162,15 +872,15 @@ video {
 .portlet[data-portlet=zuma] .section6[data-section] .section6__main {
   width: 90%;
   margin: 0 auto;
-  max-width: 1109px;
+  max-width: 1110px;
   height: 95px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 24px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1180,9 +890,6 @@ video {
     max-width: 85%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 .portlet[data-portlet=zuma] .section6[data-section] .section6__main__copy {

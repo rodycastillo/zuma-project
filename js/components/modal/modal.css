@@ -23,8 +23,8 @@ $laptop-w : 1441px;
   src: url("../fonts/Gotham-Book.eot?") format("eot"), url("../fonts/Gotham-Book.woff2") format("woff2"), url("../fonts/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book.ttf") format("truetype"), url("../fonts/Gotham-Book.svg#Gotham-Book") format("svg");
 }
 @font-face {
-  font-family: "AMX-Medium";
-  src: url("../fonts/AMX-Medium.eot?") format("eot"), url("../fonts/AMX-Medium.woff2") format("woff2"), url("../fonts/AMX-Medium.woff") format("woff"), url("../fonts/AMX-Medium.ttf") format("truetype"), url("../fonts/AMX-Medium.svg#AMX-Medium") format("svg");
+  font-family: "Gotham-Black";
+  src: url("../fonts/Gotham Black Regular.eot?") format("eot"), url("../fonts/Gotham Black Regular.woff2") format("woff2"), url("../fonts/Gotham Black Regular.woff") format("woff"), url("../fonts/Gotham Black Regular.ttf") format("truetype"), url("../fonts/Gotham Black Regular.svg#Gotham-Black") format("svg");
 }
 @font-face {
   font-family: "AMX-Bold";

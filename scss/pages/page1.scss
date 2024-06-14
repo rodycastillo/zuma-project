@@ -93,382 +93,117 @@
 
 	background: #006B1E;
 
-	.section[data-section] {
-		width: 100%;
+	.section3[data-section] {
+		padding-bottom: 80px;
+		padding-top: 2rem;
 
-		background-image: url('https://www.claro.com.pe/assets/havas/landing-deportes/liga1/assets/general/background-desktop.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: relative;
-		overflow: hidden;
-
-		padding: 50px 0 100px;
-
-		position: relative;
-
-
-		&:before {
-			position: absolute;
-			content: '';
-			width: 160px;
-			height: 160px;
-			background-image: url('https://www.claro.com.pe/assets/havas/landing-deportes/liga2/assets/general/ball__small.png');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
-			animation: rotating 3s linear infinite;
-			top: 226px;
-			left: -50px;
-
-			@include to(tablet-h) {
-				width: 74.104px;
-				height: 74.104px;
-				right: 25px;
-				top: -40px;
-				left: auto;
-			}
-
-			@include to(movil-h) {
-				width: 48px;
-				height: 48px;
-				right: 25px;
-				top: -10px;
-			}
+		@include to(movil-h) {
+			padding-bottom: 30px;
 		}
 
-		&:after {
-			position: absolute;
-			content: '';
-			width: 160px;
-			height: 160px;
-			background-image: url('https://www.claro.com.pe/assets/havas/landing-deportes/liga2/assets/general/ball__small.png');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
-			animation: rotating 3s linear infinite;
-			bottom: 226px;
-			right: -80px;
-
-			@include to(tablet-h) {
-				display: none;
-			}
-		}
-
-		@keyframes rotating {
-			from {
-				-webkit-transform: rotate(0deg);
-			}
-
-			to {
-				-webkit-transform: rotate(360deg);
-			}
-		}
-
-		@include to(tablet-h) {
-			padding: 50px 0;
-		}
-
-		.section__header {
-			width: 90%;
-			max-width: 1420px;
-			margin: 0 auto;
-
-			@include to(tablet-h) {
-				max-width: 1252px;
-				width: 90%;
-				// padding: 50px 0 0;
-			}
-
-			width: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: flex-start;
-			gap: 8px;
-
-			margin-bottom: 32px;
-
-
-			&__icon {
-				background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none"><g clip-path="url(%23clip0_2618_55011)"><path d="M6 0.499999L1.472e-06 11.4773L6 22.5L18 22.5L24 11.4773L18 0.5L6 0.499999Z" fill="%23DA291C"/></g><defs><clipPath id="clip0_2618_55011"><rect width="22" height="24" fill="white" transform="translate(24 0.5) rotate(90)"/></clipPath></defs></svg>');
-				background-repeat: no-repeat;
-				background-size: 100% 100%;
-				background-position: center;
-				width: 22px;
-				height: 24px;
-
-				@include to(movil-h) {
-					width: 16px;
-					height: 18px;
-				}
-			}
-
-			&__title {
-				font: normal 700 32px $font2;
-				line-height: normal;
-				color: #000;
-
-				@include to(tablet-h) {
-					font-size: 22px;
-				}
-
-				@include to(movil-h) {
-					font-size: 18px;
-				}
-			}
-		}
-
-
-		.section__tabs {
-			width: 456px;
-			margin: 0 auto;
-			height: 55px;
-			border-radius: 61px;
-			background: #C5261A;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			box-sizing: content-box;
-			// overflow: hidden;
-			position: relative;
-
-			@include to(tablet-h) {
-				width: 360px;
-			}
-
-			@include to(movil-h) {
-				width: 348px;
-			}
-
-
-			.glider {
-				display: block;
-				position: absolute;
-				width: 50%;
-				left: 0;
-				height: 100%;
-				background-color: #fff;
-				border-radius: 50px;
-				box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.25);
-				transition: .3s ease-out;
-				z-index: 10;
-			}
-
-			li {
-				width: 50%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 102%;
-				color: #fff;
-				border-radius: 50px;
-				box-sizing: border-box;
-				cursor: pointer;
-				gap: 8px;
-				position: relative;
-				z-index: 11;
-
-				&.active {
-
-					// background-color: #fff;
-					// border-radius: 50px;
-					// box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.25);
-
-					.ball {
-						display: flex;
-					}
-
-					.text {
-						font: normal 700 20px $font2;
-						color: #C5261A;
-
-						@include to(movil-h) {
-							font-size: 18px;
-						}
-					}
-				}
-
-				.ball {
-					display: none;
-					width: 24px;
-					height: 24px;
-					background-image: url('https://www.claro.com.pe/assets/havas/landing-deportes/liga2/assets/general/ball__small.png');
-					background-position: center;
-					background-repeat: no-repeat;
-					background-size: 100% 100%;
-					animation: rotating 3s linear infinite;
-
-					@include to(movil-h) {
-						width: 20px;
-						height: 20px;
-					}
-				}
-
-				.text {
-					font: normal 700 20px $font5;
-					line-height: 20px;
-
-					@include to(movil-h) {
-						font-size: 18px;
-					}
-				}
-			}
-		}
-
-		.section__views {
-			width: 1080px;
-			margin: 50px auto 0;
-
-			@include to(tablet-h) {
-				width: 90%;
-			}
-
-			@include to(movil-h) {
-				width: 100%;
-				padding-left: 5%;
-				overflow-x: scroll;
-			}
-
-			&::-webkit-scrollbar {
-				display: none;
-			}
-		}
-
-		.section__view {
+		.section3__main {
 			width: 100%;
 
-			display: none;
-
-			@include to(movil-h) {
-				width: 700px;
-				padding-right: 5%;
-			}
-
-			&.active {
-				display: block;
-			}
-
-			&__header {
-				width: 100%;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				height: 71px;
-				border-radius: 20px;
-				background: linear-gradient(270deg, #821911 0%, #DA291C 53.13%, #8D1B13 100%);
-				overflow: hidden;
-
-				@include to(tablet-h) {
-					height: 55px;
-					border-radius: 10px;
-				}
-
-				li {
-					font: normal 700 18px $font2;
+			hgroup {
+				h2 {
+					font: normal 400 44px $font5;
+					line-height: 50px;
 					color: #fff;
 					text-align: center;
 
-					width: 90px;
+					@include to(movil-h) {
+						font-size: 20px;
+						line-height: 50px;
+					}
+				}
 
-					display: block;
+				p {
+					font: normal 400 16px $font1;
+					line-height: 26px;
+					color: #fff;
+					max-width: 990px;
+					text-align: left;
+					margin: 49px auto 0;
 
 					@include to(tablet-h) {
-						font-size: 13px;
+						max-width: 90%;
 					}
 
-					&:nth-child(1) {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 290px;
-
-						@include to(tablet-h) {
-							width: 190px;
-						}
-					}
-
-					&:last-child {
-						width: 95px;
+					@include to(movil-h) {
+						font-size: 14px;
+						line-height: 22px;
+						max-width: 285px;
+						width: 90%;
+						margin-top: 10px;
 					}
 				}
 			}
 
-			&__item {
-				width: 100%;
-				height: 74px;
-				background-color: #fff;
-				border-radius: 20px;
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
+			&__video {
+				width: 1191px;
+				height: 670px;
+				margin: 64px auto 0;
 
-				margin-top: 16px;
+				max-width: 90%;
 
 				@include to(tablet-h) {
-					height: 55px;
-					margin-top: 12px;
-					border-radius: 10px;
+					height: auto;
 				}
 
-				li {
-					font: normal 400 18px $font5;
-					color: #000;
-					text-align: center;
+				@include to(movil-h) {
+					border-radius: 20px;
+					overflow: hidden;
+					margin-top: 30px;
+					width: 285px;
+					min-height: 433px;
+				}
 
-					width: 90px;
-
-					display: block;
-
-					@include to(tablet-h) {
-						font-size: 13px;
-					}
-
-					&:nth-child(1) {
-						width: 290px;
-
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						gap: 19px;
-						font-family: $font2;
-
-						@include to(tablet-h) {
-							gap: 10px;
-							width: 190px;
-						}
-
-						img {
-							width: 34px;
-							height: 34px;
-							object-fit: contain;
-							object-position: center;
+				video {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					object-position: center;
 
 
-							@include to(tablet-h) {
-								width: 31.395px;
-								height: 31.395px;
-							}
-						}
+					&.desktop {
+						display: block;
 
-						span {
-							width: 190px;
-							text-wrap: wrap;
-							text-align: left;
-							text-transform: uppercase;
-
-							@include to(tablet-h) {
-								width: 70px;
-							}
+						@include to(movil-h) {
+							display: none;
 						}
 					}
 
-					&:last-child {
-						width: 95px;
-						font-family: $font2;
+					&.mobile {
+						display: none;
+
+						@include to(movil-h) {
+							display: flex;
+						}
 					}
+
+				}
+			}
+
+			&__resources {
+				width: 660.759px;
+				height: 66.471px;
+				margin: 64px auto 0;
+
+				@include to(movil-h) {
+					width: 310.613px;
+					height: 36.034px;
+					max-width: 90%;
+					margin-top: 30px;
+				}
+
+				img {
+					width: 100%;
+					height: auto;
+					object-fit: contain;
+					object-position: center;
 				}
 			}
 		}
-
 	}
 
 	.section4[data-section] {
@@ -511,7 +246,7 @@
 				h2 {
 					color: #fff;
 					text-align: center;
-					font: normal 500 44px $font2;
+					font: normal 500 44px $font5;
 					line-height: 62px;
 					text-transform: uppercase;
 
@@ -576,21 +311,22 @@
 				flex-wrap: wrap;
 				gap: 109px;
 
+				@include to(tablet-h) {
+					gap: 50px;
+				}
+
 				@include to(movil-h) {
 					gap: 10px;
-					// max-width: 100%;
-					// margin: 0 auto;
 				}
 
 				&__item {
 					width: 127px;
 					height: 127px;
-					// background-color: #fff;
 					border-radius: 100%;
-					margin: 0 20px;
 
 					@include to(movil-h) {
 						width: 56px;
+						margin: 0 20px;
 						height: 56px;
 					}
 
@@ -739,20 +475,17 @@
 		.section6__main {
 			width: 90%;
 			margin: 0 auto;
-			max-width: 1109px;
+			max-width: 1110px;
 			height: 95px;
 			display: flex;
 			padding-top: 24px;
-			justify-content: center;
+			justify-content: space-between;
 			align-items: center;
 
 			@include to(movil-h) {
 				max-width: 85%;
 				flex-wrap: wrap;
-				justify-content: space-between;
 			}
-
-			// gap: 553px;
 
 			&__copy {
 				color: rgba(255, 255, 255, 0.50);

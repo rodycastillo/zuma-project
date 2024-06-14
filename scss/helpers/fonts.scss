@@ -50,7 +50,7 @@ $formats: (
 @include font-face('Gotham-Medium', '../fonts/Gotham-Medium');
 @include font-face('Gotham-Bold', '../fonts/Gotham-Bold');
 @include font-face('Gotham-Book', '../fonts/Gotham-Book');
-@include font-face('AMX-Medium', '../fonts/AMX-Medium');
+@include font-face('Gotham-Black', '../fonts/Gotham Black Regular');
 @include font-face('AMX-Bold', '../fonts/AMX-Bold');
 
 
@@ -61,7 +61,7 @@ $font1: 'Roboto';
 $font2: 'Gotham-Bold';
 $font3: 'Gotham-Medium';
 $font4: 'Gotham-Book';
-$font5: 'AMX-Regular';
+$font5: 'Gotham-Black';
 $font6: 'AMX-Bold';
 
 /*$font1: 'Arial';
