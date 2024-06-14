@@ -12,6 +12,8 @@ block content
 			.portlet(data-portlet="zuma")
 
 
+				section.section3(data-section)
+					.section3__main 
 
 				section.section4(data-section) 
 					.section4__main 
@@ -36,37 +38,16 @@ block content
 							hgroup 
 								p  ¡Sé social, visítanos en nuestras redes!
 							.section5__main__social__icons 
-								a.section5__main__social__icon 
-									//- img(src="" alt="")
-									p F
-								a.section5__main__social__icon 
-									//- img(src="" alt="")
-									p I
-								a.section5__main__social__icon 
-									//- img(src="" alt="")
-									p Y
+								a.section5__main__social__icon(href="https://www.instagram.com/zumacoldpressed/" target="_blank") 
+									img(src="/assets/logos/instagram.png" alt="")
+								a.section5__main__social__icon(href="https://www.facebook.com/ZUMAColdPressed/" target="_blank")
+									img(src="/assets/logos/facebook.png" alt="")
+								a.section5__main__social__icon(href="https://www.youtube.com/@zumacoldpressed4824/" target="_blank") 
+									img(src="/assets/logos/youtube.png" alt="")
 				footer.section6(data-section)
 					.section6__main 
 						p.section6__main__copy Zuma &copy;2024 Todos los derechos reservados
 						p.section6__main__made Made with 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -75,10 +56,5 @@ block plugins
 
 block css
 
-	//- link(rel='stylesheet' type='text/css' href=path+'components/menufix/menufix.css' charset="utf-8")
-
-
 block javascript
-
-	script(type='text/javascript' src= path+'js/library/slick.js')
 	script(type='text/javascript' src=path+"js/common.js")

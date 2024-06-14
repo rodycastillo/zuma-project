@@ -11,16 +11,16 @@ $laptop-w : 1441px;
 */
 @import url(https://fonts.googleapis.com/css?family=Anton|Bevan|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i);
 @font-face {
-  font-family: "AMX-Black";
-  src: url("../fonts/AMX-Black.eot?") format("eot"), url("../fonts/AMX-Black.woff2") format("woff2"), url("../fonts/AMX-Black.woff") format("woff"), url("../fonts/AMX-Black.ttf") format("truetype"), url("../fonts/AMX-Black.svg#AMX-Black") format("svg");
+  font-family: "Gotham-Medium";
+  src: url("../fonts/Gotham-Medium.eot?") format("eot"), url("../fonts/Gotham-Medium.woff2") format("woff2"), url("../fonts/Gotham-Medium.woff") format("woff"), url("../fonts/Gotham-Medium.ttf") format("truetype"), url("../fonts/Gotham-Medium.svg#Gotham-Medium") format("svg");
 }
 @font-face {
-  font-family: "AMX";
-  src: url("../fonts/AMXClaro-Brands.eot?") format("eot"), url("../fonts/AMXClaro-Brands.woff2") format("woff2"), url("../fonts/AMXClaro-Brands.woff") format("woff"), url("../fonts/AMXClaro-Brands.ttf") format("truetype"), url("../fonts/AMXClaro-Brands.svg#AMX") format("svg");
+  font-family: "Gotham-Bold";
+  src: url("../fonts/Gotham-Bold.eot?") format("eot"), url("../fonts/Gotham-Bold.woff2") format("woff2"), url("../fonts/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold.ttf") format("truetype"), url("../fonts/Gotham-Bold.svg#Gotham-Bold") format("svg");
 }
 @font-face {
-  font-family: "AMX-Regular";
-  src: url("../fonts/AMX-Regular.eot?") format("eot"), url("../fonts/AMX-Regular.woff2") format("woff2"), url("../fonts/AMX-Regular.woff") format("woff"), url("../fonts/AMX-Regular.ttf") format("truetype"), url("../fonts/AMX-Regular.svg#AMX-Regular") format("svg");
+  font-family: "Gotham-Book";
+  src: url("../fonts/Gotham-Book.eot?") format("eot"), url("../fonts/Gotham-Book.woff2") format("woff2"), url("../fonts/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book.ttf") format("truetype"), url("../fonts/Gotham-Book.svg#Gotham-Book") format("svg");
 }
 @font-face {
   font-family: "AMX-Medium";
