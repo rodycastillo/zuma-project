@@ -93,6 +93,143 @@
 
 	background: #006B1E;
 
+	.section1[data-section] {
+		width: 100%;
+		height: 100vh;
+		min-height: 1300px;
+
+		position: relative;
+
+
+		@include to(movil-h) {
+			min-height: 800px;
+		}
+
+		&:before {
+			width: 330.391px;
+			height: 1100px;
+			flex-shrink: 0;
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			background-image: url('/assets/variants/resource1__left.png');
+			background-repeat: no-repeat;
+			background-position: top right;
+
+			@include to(movil-h) {
+				width: 150px;
+				height: 600px;
+				background-size: contain;
+			}
+		}
+
+
+		&:after {
+			width: 330.391px;
+			height: 1100px;
+			flex-shrink: 0;
+			position: absolute;
+			content: '';
+			right: 0;
+			top: 0;
+			background-image: url('/assets/variants/resource1__right.png');
+			background-repeat: no-repeat;
+			background-position: top left;
+
+			@include to(movil-h) {
+				width: 150px;
+				height: 600px;
+				background-size: contain;
+			}
+		}
+	}
+
+
+	.section2[data-section] {
+		width: 100%;
+
+		// height: 521px;
+		height: 490px;
+		background-color: #004513;
+		overflow: hidden;
+
+		.section2__main {
+			width: 100%;
+			text-align: center;
+			min-height: 300px;
+			padding: 30px 0;
+
+			hgroup {
+				h2 {
+					font: normal 400 44px $font5;
+					line-height: 50px;
+					color: #fff;
+					text-align: center;
+					text-transform: uppercase;
+
+					@include to(movil-h) {
+						font-size: 20px;
+						line-height: 50px;
+					}
+				}
+			}
+
+			&__list {
+				display: flex;
+				justify-content: center;
+				margin-top: 40px;
+				gap: 80px;
+				flex-wrap: wrap;
+			}
+
+			&__item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 7px;
+
+				img {
+					height: auto;
+					max-width: 63px;
+					object-fit: contain;
+					object-position: center;
+				}
+
+				span {
+					font: normal 400 14px $font5;
+					line-height: 19px;
+					color: #fff;
+					text-align: center;
+				}
+
+				&:nth-child(4) {
+					transform: scale(1.6);
+					margin-top: -50px;
+				}
+
+				&:nth-child(1),
+				&:nth-child(7) {
+					margin-top: 200px;
+				}
+
+				&:nth-child(2),
+				&:nth-child(6) {
+					margin-top: 100px;
+				}
+
+				&:nth-child(3),
+				&:nth-child(5) {
+					margin-top: 20px;
+				}
+			}
+		}
+
+	}
+
+
+
 	.section3[data-section] {
 		padding-bottom: 80px;
 		padding-top: 2rem;
