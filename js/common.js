@@ -1,34 +1,58 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const items = document.querySelectorAll('.section2__main__item');
-//   const section2 = document.querySelector('.section2');
+document.addEventListener("DOMContentLoaded", function () {
 
-//   const updateCenterItem = () => {
-//     items.forEach(item => item.classList.remove('centered'));
+  const main__portlet = document.querySelector(".portlet[data-portlet=zuma]")
 
+  const toScrollStores = main__portlet.querySelectorAll('.toScrollStores');
+  toScrollStores.forEach((item) => {
+    item.addEventListener('click', () => {
+      main__portlet.querySelector('section.section4').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+    })
+  })
 
-//     console.log(section2.getBoundingClientRect())
+  const slider = main__portlet.querySelector(".section1__slider");
+  const slides = main__portlet.querySelectorAll('.section1__slider__item');
 
-//     const section2Rect = section2.getBoundingClientRect();
-//     const section2Middle = section2Rect.top + section2Rect.height / 2;
+  const prevButton = main__portlet.querySelector('.arrow__left');
+  const nextButton = main__portlet.querySelector('.arrow__right');
 
-//     let closest = items[0];
-//     let closestDistance = Math.abs(closest.getBoundingClientRect().top + closest.clientHeight / 2 - section2Middle);
+  let currentIndex = 0;
+  let slideCount = slides.length;
+  let interval;
 
-//     items.forEach(item => {
-//       const itemMiddle = item.getBoundingClientRect().top + item.clientHeight / 2;
-//       const distance = Math.abs(itemMiddle - section2Middle);
+  const updateSlidePosition = () => {
+    slider.style.transform = `translateX(-${currentIndex * 100}vw)`;
+  };
 
-//       if (distance < closestDistance) {
-//         closest = item;
-//         closestDistance = distance;
-//       }
-//     });
+  const nextSlide = () => {
+    currentIndex = (currentIndex + 1) % slideCount;
+    updateSlidePosition();
+  };
 
-//     closest.classList.add('centered');
-//   };
+  const prevSlide = () => {
+    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+    updateSlidePosition();
+  };
 
-//   window.addEventListener('scroll', updateCenterItem);
+  const startAutoplay = () => {
+    interval = setInterval(nextSlide, 3000);
+  };
 
-//   // Call the function initially to set the correct centered item
-//   // updateCenterItem();
-// });
+  const stopAutoplay = () => {
+    clearInterval(interval);
+  };
+
+  nextButton.addEventListener('click', () => {
+    stopAutoplay();
+    nextSlide();
+    startAutoplay();
+  });
+
+  prevButton.addEventListener('click', () => {
+    stopAutoplay();
+    prevSlide();
+    startAutoplay();
+  });
+
+  startAutoplay();
+
+});

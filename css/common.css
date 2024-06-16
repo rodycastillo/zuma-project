@@ -426,7 +426,7 @@ video {
 }
 .portlet[data-portlet=zuma] .section1[data-section] {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   overflow: hidden;
   position: relative;
 }
@@ -437,7 +437,7 @@ video {
 }
 .portlet[data-portlet=zuma] .section1[data-section]:before {
   width: 330.391px;
-  height: 1100px;
+  height: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: absolute;
@@ -448,6 +448,7 @@ video {
   background-image: url("/assets/variants/resource1__left.png");
   background-repeat: no-repeat;
   background-position: top right;
+  background-size: cover;
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section1[data-section]:before {
@@ -458,7 +459,7 @@ video {
 }
 .portlet[data-portlet=zuma] .section1[data-section]:after {
   width: 330.391px;
-  height: 1100px;
+  height: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: absolute;
@@ -469,6 +470,7 @@ video {
   background-image: url("/assets/variants/resource1__right.png");
   background-repeat: no-repeat;
   background-position: top left;
+  background-size: cover;
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section1[data-section]:after {
@@ -481,13 +483,22 @@ video {
   width: 100%;
   height: inherit;
   background-color: #fff;
-}
-.portlet[data-portlet=zuma] .section1[data-section] .section1__slider {
-  width: 100%;
-  height: inherit;
   position: relative;
 }
-.portlet[data-portlet=zuma] .section1[data-section] .section1__slider__logo {
+.portlet[data-portlet=zuma] .section1[data-section] .section1__main::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-image: url("/assets/background/sections/background1__bottom.png");
+  background-position: top center;
+  background-size: cover;
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__main__logo {
   position: absolute;
   top: 13%;
   left: 0;
@@ -495,11 +506,12 @@ video {
   z-index: 4;
   margin: 0 auto;
 }
-.portlet[data-portlet=zuma] .section1[data-section] .section1__slider h1 {
+.portlet[data-portlet=zuma] .section1[data-section] .section1__main h1 {
   position: absolute;
   left: 0;
   right: 0;
-  top: 21%;
+  top: 24%;
+  z-index: 3;
   margin: 0 auto;
   text-align: center;
   max-width: 663px;
@@ -508,12 +520,144 @@ video {
   line-height: 50px;
   text-transform: uppercase;
 }
-.portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
+@-webkit-keyframes bobble {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+@keyframes bobble {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left, .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-filter: grayscale(3px);
+          filter: grayscale(3px);
+  border: 1.2px solid #fff;
+  border-radius: 100%;
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left:hover, .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right:hover {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-filter: grayscale(0px);
+          filter: grayscale(0px);
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left:hover, .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left {
+  position: absolute;
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+  top: 47%;
+  background-image: url("/assets/variants/arrow__left.png");
+  background-position: center;
+  background-size: contain;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-transform: translateX(-330px);
+          transform: translateX(-330px);
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right {
+  position: absolute;
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+  top: 47%;
+  background-image: url("/assets/variants/arrow__right.png");
+  background-position: center;
+  background-size: contain;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-transform: translateX(350px);
+          transform: translateX(350px);
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__down {
+  position: absolute;
+  z-index: 5;
+  bottom: 30%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 64px;
+  height: 62px;
+  border-radius: 8.548px;
+  background: #006B1E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: bobble 3s infinite;
+          animation: bobble 3s infinite;
+  box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__slider {
   width: 100%;
+  height: inherit;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
+  width: 100vw;
   height: inherit;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v1 {
   background-image: url("/assets/background/slides/fondo1.jpg");
@@ -548,10 +692,9 @@ video {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  padding-top: 400px;
 }
-.portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main img {
-  height: 403.593px;
+.portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__img {
+  height: 350px;
   -webkit-transform: rotate(15.284deg);
           transform: rotate(15.284deg);
   -ms-flex-negative: 0;
@@ -587,6 +730,55 @@ video {
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p.v6 {
   color: #F7FFC6;
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content .toScrollStores {
+  width: 188px;
+  border: none;
+  border: 1px solid #fff;
+  height: 56px;
+  margin-top: 32px;
+  background-color: transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-filter: grayscale(8px);
+          filter: grayscale(8px);
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content .toScrollStores:hover {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-filter: grayscale(0px);
+          filter: grayscale(0px);
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content .toScrollStores:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content .toScrollStores span {
+  color: #fff;
+  font: normal 500 16px "Gotham-Book";
+  line-height: 40.741px;
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content .toScrollStores img {
+  width: 16px;
+  height: 18px;
 }
 .portlet[data-portlet=zuma] .section2[data-section] {
   width: 100%;
