@@ -17,7 +17,7 @@ html(lang='es')
 		meta(http-equiv='Content-Type' content='text/html;charset=UTF-8')
 		meta(name='viewport' content='width=device-width,initial-scale=1,user-scalable=no')
 
-		script(type='text/javascript' src= path+'js/library/jquery.js')
+		//- script(type='text/javascript' src= path+'js/library/jquery.js')
 		//-script(type='text/javascript' src=path+"js/library/pug.js")
 
 		if css == 1
@@ -37,24 +37,10 @@ html(lang='es')
 			//-include ../../components/header/header.pug
 			.layout__main
 				+block_content
-			//-include ../../components/footer/footer.pug
+				//-include ../../components/footer/footer.pug
 
-			if plugins == 1
-				+block_plugins
-
-		//-.load_ing#load_er
-			img(src='https://www.claro.com.pe/portal/pe-2020/recursos_contenido/claro-home/7e3e6f3b-2d43-4906-948c-25d3d00aa81e-loadingClaro.gif' alt='')
-
-		//-script(type='text/javascript' src=path+"js/portal/vue3.js") 
-		//-script(type='text/javascript' src=path+"js/portal/vue3-demi.js") 
-		//-script(type='text/javascript' src=path+"js/portal/vuelidate3-core.js") 
-		//-script(type='text/javascript' src=path+"js/portal/vuelidate3-validators.js") 
-		//-script(src="https://unpkg.com/vueperslides" crossorigin="anonymous")
-		//-script(type='text/javascript' src=path+"js/portal/vue3-carousel.js") 
-
-
+				if plugins == 1
+					//- +block_plugins
 
 		if script == 1
 			+block_javascript
-		//- script(type='text/javascript' src=path+"header/header.js")
-		//-script(type='text/javascript' src=pathJSComponent+"footer/footer.js")

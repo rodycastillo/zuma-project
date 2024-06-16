@@ -10,13 +10,13 @@
 );*/
 
 $breakpoints: (
-  movil  		: 481px,
-  movil-h 	: 641px,
-  tablet 		: 769px,
-  tablet-h  : 1025px,
-  tablet-w  : 1342px,
-  laptop  	: 1367px,
-  laptop-w 	: 1441px
+  movil: 481px,
+  movil-h: 641px,
+  tablet: 769px,
+  tablet-h : 1025px,
+  tablet-w : 1342px,
+  laptop: 1367px,
+  laptop-w: 1441px
 );
 
 // color
@@ -45,17 +45,3 @@ $color_b11: #8c171b;
 $color_b12: #c5261c;
 $color_b13: #a0a0a0;
 $color_b14: #f9f8f9;
-
-
-//rutas
-
-/*$path: "https://static.claro.com.pe/landings/havas/2022/dco/v2/assets";
-$path-netflix: "https://static.claro.com.pe/landings/havas/2022/dco/v2/assets/banners/netflix";
-$path-fibraoptica: "https://static.claro.com.pe/landings/havas/2022/dco/v2/assets/banners/fibraoptica";*/
-
-$path: "https://static.claro.com.pe/landings/havas/2023/centro-de-ayuda/v1/assets";
-//$path: "../assets";
-$path-netflix: "https://www.claro.com.pe/portal/pe-2020/recursos_contenido/claro-home";
-$path-fibraoptica: "https://www.claro.com.pe/portal/pe-2020/recursos_contenido/claro-home";
-
-$pathfonts: "../fonts";

@@ -1,6 +1,4 @@
-@charset "UTF-8";
 /* Base  */
-@import url(https://fonts.googleapis.com/css?family=Anton|Bevan|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i);
 @font-face {
   font-family: "Gotham-Medium";
   src: url("../fonts/Gotham-Medium.eot?") format("eot"), url("../fonts/Gotham-Medium.woff2") format("woff2"), url("../fonts/Gotham-Medium.woff") format("woff"), url("../fonts/Gotham-Medium.ttf") format("truetype"), url("../fonts/Gotham-Medium.svg#Gotham-Medium") format("svg");
@@ -17,14 +15,8 @@
   font-family: "Gotham-Black";
   src: url("../fonts/Gotham Black Regular.eot?") format("eot"), url("../fonts/Gotham Black Regular.woff2") format("woff2"), url("../fonts/Gotham Black Regular.woff") format("woff"), url("../fonts/Gotham Black Regular.ttf") format("truetype"), url("../fonts/Gotham Black Regular.svg#Gotham-Black") format("svg");
 }
-@font-face {
-  font-family: "AMX-Bold";
-  src: url("../fonts/AMX-Bold.eot?") format("eot"), url("../fonts/AMX-Bold.woff2") format("woff2"), url("../fonts/AMX-Bold.woff") format("woff"), url("../fonts/AMX-Bold.ttf") format("truetype"), url("../fonts/AMX-Bold.svg#AMX-Bold") format("svg");
-}
 /*$fuente1: 'Anton';
 $fuente2: 'Bevan';*/
-/*$font1: 'Arial';
-$font2: 'Arial';*/
 /******************** variables ********************/
 /*$breakpoints: (
   movil  		: 480px,
@@ -34,9 +26,6 @@ $font2: 'Arial';*/
   tablet-w  : 1344px,
   laptop  	: 1367px
 );*/
-/*$path: "https://static.claro.com.pe/landings/havas/2022/dco/v2/assets";
-$path-netflix: "https://static.claro.com.pe/landings/havas/2022/dco/v2/assets/banners/netflix";
-$path-fibraoptica: "https://static.claro.com.pe/landings/havas/2022/dco/v2/assets/banners/fibraoptica";*/
 /*.color($color: 'null'){
 
 	.color_atributos1 ($color) when (iscolor($color)) {
@@ -208,37 +197,6 @@ video {
     @include caja-modelo(border-box);
   }
 }*/
-.icon::before {
-  display: inline-block;
-  margin-right: 0.5em;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
-.globo {
-  padding: 10px;
-  width: 220px;
-  border­radius: 10px;
-  background­color: #8f0;
-  font­family: "trebuchet ms", tahoma, verdana, sans­serif;
-  font­size: 1.4em;
-}
-.globo:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border­bottom: 30px solid #8f0;
-  border­right: 20px solid transparent;
-  border­left: 20px solid transparent;
-  margin: ­30px 0 0 90px;
-}
-
 /* Flexbox */
 /*@mixin flex {
   display:-webkit-box;
@@ -388,7 +346,7 @@ video {
 }
 
 .portlet[data-portlet=zuma] {
-  background: #006B1E;
+  background-color: #005919;
 }
 .portlet[data-portlet=zuma] html {
   margin: 0px;
@@ -520,8 +478,8 @@ video {
 .portlet[data-portlet=zuma] .section2[data-section] {
   width: 100%;
   height: 490px;
-  background-color: #004513;
   overflow: hidden;
+  background: #006B1D;
 }
 .portlet[data-portlet=zuma] .section2[data-section] .section2__main {
   width: 100%;
@@ -550,7 +508,7 @@ video {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 40px;
-  gap: 80px;
+  gap: 120px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -601,6 +559,41 @@ video {
 .portlet[data-portlet=zuma] .section3[data-section] {
   padding-bottom: 80px;
   padding-top: 2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  background: #006B1D;
+}
+.portlet[data-portlet=zuma] .section3[data-section]:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -10%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-image: url("/assets/background/sections/background3.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+.portlet[data-portlet=zuma] .section3[data-section]::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  width: 100%;
+  background-color: #005919;
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section3[data-section]::before {
+    height: 70%;
+  }
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section3[data-section] {
@@ -609,6 +602,68 @@ video {
 }
 .portlet[data-portlet=zuma] .section3[data-section] .section3__main {
   width: 100%;
+  z-index: 2;
+  position: relative;
+}
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
+  position: absolute;
+  content: "";
+  width: 455px;
+  height: 100%;
+  top: 6%;
+  left: 0;
+  z-index: 1;
+  background-image: url("/assets/variants/resource3__left.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
+    width: 250px;
+    top: auto;
+    bottom: 1%;
+    height: 600px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
+    background-image: url("/assets/variants/resource3__left-M.png");
+    width: 120px;
+    height: 506px;
+    top: auto;
+    bottom: 2%;
+  }
+}
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {
+  position: absolute;
+  content: "";
+  width: 455px;
+  height: 100%;
+  top: 4%;
+  right: 0;
+  z-index: 1;
+  background-image: url("/assets/variants/resource3__right.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {
+    width: 250px;
+    top: auto;
+    bottom: 1%;
+    height: 600px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {
+    background-image: url("/assets/variants/resource3__right-M.png");
+    width: 98px;
+    height: 538px;
+    top: auto;
+    bottom: 3%;
+  }
 }
 .portlet[data-portlet=zuma] .section3[data-section] .section3__main hgroup h2 {
   font: normal 400 44px "Gotham-Black";
@@ -623,10 +678,10 @@ video {
   }
 }
 .portlet[data-portlet=zuma] .section3[data-section] .section3__main hgroup p {
-  font: normal 400 16px "Roboto";
+  font: normal 400 16px "Gotham-Book";
   line-height: 26px;
   color: #fff;
-  max-width: 990px;
+  max-width: 994px;
   text-align: left;
   margin: 49px auto 0;
 }
@@ -639,7 +694,7 @@ video {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main hgroup p {
     font-size: 14px;
     line-height: 22px;
-    max-width: 285px;
+    max-width: 306px;
     width: 90%;
     margin-top: 10px;
   }
@@ -649,6 +704,8 @@ video {
   height: 670px;
   margin: 64px auto 0;
   max-width: 90%;
+  border-radius: 20px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1024px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
@@ -658,10 +715,11 @@ video {
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
     border-radius: 20px;
-    overflow: hidden;
     margin-top: 30px;
     width: 285px;
-    min-height: 433px;
+    max-height: 433px;
+    width: auto;
+    max-width: 285px;
   }
 }
 .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video video {
@@ -775,7 +833,7 @@ video {
   height: fit-content;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  background-color: #006B1E;
 }
 .portlet[data-portlet=zuma] .section5[data-section]:after {
   width: 100%;
@@ -787,6 +845,7 @@ video {
   bottom: -2px;
   left: 0;
   right: 0;
+  background-color: #006B1E;
   background-image: url("/assets/background/sections/background5.png");
   background-position: bottom center;
   background-repeat: no-repeat;
