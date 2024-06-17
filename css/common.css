@@ -458,6 +458,11 @@ video {
   background-position: top right;
   background-size: cover;
 }
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section1[data-section]:before {
+    width: 340px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .portlet[data-portlet=zuma] .section1[data-section]:before {
     width: 110px;
@@ -481,6 +486,11 @@ video {
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
+}
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section1[data-section]:after {
+    width: 340px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .portlet[data-portlet=zuma] .section1[data-section]:after {
@@ -559,13 +569,18 @@ video {
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   z-index: 10;
   margin: 0 auto;
   left: 0;
   right: 0;
   width: 755.004px;
   height: 86.001px;
+}
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands {
+    bottom: 8%;
+  }
 }
 @media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands {
@@ -1059,7 +1074,7 @@ video {
 .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
   position: absolute;
   content: "";
-  width: 455px;
+  width: 418px;
   height: 100%;
   top: 6%;
   left: 0;
@@ -1068,6 +1083,13 @@ video {
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%;
+}
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
+    height: 90%;
+    width: 380px;
+    top: 10%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
@@ -1100,6 +1122,13 @@ video {
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%;
+}
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {
+    height: 90%;
+    width: 380px;
+    top: 10%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {

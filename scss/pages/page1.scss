@@ -124,6 +124,10 @@
 			background-position: top right;
 			background-size: cover;
 
+			@include to(1690px) {
+				width: 340px;
+			}
+
 			@include to(tablet-h) {
 				width: 110px;
 				height: 621px;
@@ -147,6 +151,10 @@
 			background-repeat: no-repeat;
 			background-position: top left;
 			background-size: cover;
+
+			@include to(1690px) {
+				width: 340px;
+			}
 
 			@include to(tablet-h) {
 				width: 110px;
@@ -228,7 +236,7 @@
 
 			.brands {
 				position: absolute;
-				bottom: 10%;
+				bottom: 5%;
 				z-index: 10;
 				margin: 0 auto;
 				left: 0;
@@ -236,6 +244,10 @@
 
 				width: 755.004px;
 				height: 86.001px;
+
+				@include to(1690px) {
+					bottom: 8%;
+				}
 
 				@include to(tablet) {
 					width: 276.895px;
@@ -569,7 +581,6 @@
 		}
 	}
 
-
 	.section2[data-section] {
 		width: 100%;
 		height: 490px;
@@ -712,7 +723,7 @@
 			&:before {
 				position: absolute;
 				content: '';
-				width: 455px;
+				width: 418px;
 				height: 100%;
 
 				top: 6%;
@@ -722,6 +733,12 @@
 				background-repeat: no-repeat;
 				background-position: top;
 				background-size: 100%;
+
+				@include to(1690px) {
+					height: 90%;
+					width: 380px;
+					top: 10%;
+				}
 
 				@include to(tablet-h) {
 					width: 250px;
@@ -755,6 +772,12 @@
 				background-repeat: no-repeat;
 				background-position: top;
 				background-size: 100%;
+
+				@include to(1690px) {
+					height: 90%;
+					width: 380px;
+					top: 10%;
+				}
 
 				@include to(tablet-h) {
 					width: 250px;
