@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruleta con Scroll Horizontal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .spacer {
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .section2 {
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #3a5d23;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section2__main__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      transition: transform 1s ease-in-out;
+      position: relative;
+    }
+
+    .section2__main__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      transition: transform 1s ease-in-out;
+    }
+
+    .section2__main__item img {
+      height: auto;
+      max-width: 63px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .section2__main__item span {
+      font: normal 400 14px Arial, sans-serif;
+      line-height: 19px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .section2__main__item.active {
+      transform: scale(2);
+    }
+
+    .section2__main__item:nth-child(2),
+    .section2__main__item:nth-child(6) {
+      margin-top: 160px;
+    }
+
+    .section2__main__item:nth-child(3),
+    .section2__main__item:nth-child(5) {
+      margin-top: 80px;
+    }
+
+    .section2__main__item:nth-child(1),
+    .section2__main__item:nth-child(7) {
+      margin-top: 240px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="spacer">Scroll down</div>
+  <section class="section2" data-section="data-section">
+    <div class="section2__main">
+      <div class="section2__main__list">
+        <div class="section2__main__item active">
+          <img src="/assets/variants/item1.png" alt="" />
+          <span>EMPIEZA BIEN<br />
+            TU DÍA</span>
+        </div>
+        <div class="section2__main__item">
+          <img src="/assets/variants/item2.png" alt="" />
+          <span>RECARGA<br />
+            TUS ENERGÍAS</span>
+        </div>
+        <div class="section2__main__item">
+          <img src="/assets/variants/item3.png" alt="" />
+          <span>ALIMÉNTATE<br />
+            SALUDABLE</span>
+        </div>
+        <div class="section2__main__item">
+          <img src="/assets/variants/item4.png" alt="" />
+          <span>TOMA UN<br />
+            DESCANSO</span>
+        </div>
+        <div class="section2__main__item">
+          <img src="/assets/variants/item5.png" alt="" />
+          <span>ENTRENA CON<br />
+            ENERGÍA</span>
+        </div>
+        <div class="section2__main__item">
+          <img src="/assets/variants/item6.png" alt="" />
+          <span>MANTÉN LA<br />
+            CONCENTRACIÓN</span>
+        </div>
+        <div class="section2__main__item">
+          <img src="/assets/variants/item7.png" alt="" />
+          <span>HIDRÁTATE EN<br />
+            EL CAMINO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="spacer">Scroll up</div>
+
+  <script>
+    const section = document.querySelector('.section2');
+    const list = document.querySelector('.section2__main__list');
+    const items = document.querySelectorAll('.section2__main__item');
+    let lastScrollTop = 0;
+
+    const handleScroll = () => {
+      const st = section.pageYOffset || document.documentElement.scrollTop;
+
+      if (st > lastScrollTop) {
+        // Scroll down
+        list.appendChild(list.firstElementChild);
+      } else {
+        // Scroll up
+        list.insertBefore(list.lastElementChild, list.firstElementChild);
+      }
+
+      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+
+      // Add active class to the new first element
+      items.forEach((item, index) => {
+        item.classList.remove('active');
+        if (index === Math.floor(items.length / 2)) {
+          item.classList.add('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+  </script>
+</body>
+
+</html>

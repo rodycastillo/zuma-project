@@ -49,6 +49,35 @@ document.addEventListener("DOMContentLoaded", function () {
   checkVideoVisibility();
 
 
+  const section = document.querySelector('.section2');
+  const list = document.querySelector('.section2__main__list');
+  const items = document.querySelectorAll('.section2__main__item');
+  let lastScrollTop = 0;
+
+  const handleScroll = () => {
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > lastScrollTop) {
+      // Scroll down
+      list.appendChild(list.firstElementChild);
+    } else {
+      // Scroll up
+      list.insertBefore(list.lastElementChild, list.firstElementChild);
+    }
+
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+
+    // Add active class to the new first element
+    items.forEach((item, index) => {
+      item.classList.remove('active');
+      if (index === Math.floor(items.length / 2)) {
+        item.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+
 
 
   // TO SCROLL

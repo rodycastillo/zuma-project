@@ -587,11 +587,23 @@
 		overflow: hidden;
 		background: #006B1D;
 
+		@include to(tablet-h) {
+			height: 400px;
+		}
+
+		@include to(movil-h) {
+			height: 300px;
+		}
+
 		.section2__main {
 			width: 100%;
 			text-align: center;
 			min-height: 300px;
 			padding: 30px 0;
+
+			@include to(movil-h) {
+				padding: 0;
+			}
 
 			hgroup {
 				h2 {
@@ -611,9 +623,26 @@
 			&__list {
 				display: flex;
 				justify-content: center;
-				margin-top: 40px;
+				margin-top: 90px;
 				gap: 120px;
 				flex-wrap: wrap;
+				transition: transform .5s ease-in-out;
+
+				@include to(tablet-h) {
+					gap: 40px;
+					margin-top: 0;
+				}
+
+				@include to(movil-h) {
+					gap: 35px;
+					justify-content: space-between;
+					padding: 0 5px;
+					transform: translateX(-20vw);
+					flex-wrap: nowrap;
+					// overflow: hidden;
+					// overflow-y: hidden;
+					width: 140vw;
+				}
 			}
 
 			&__item {
@@ -622,12 +651,25 @@
 				align-items: center;
 				justify-content: center;
 				gap: 7px;
+				transition: transform .1s ease-in-out;
+
+				@include to(movil-h) {
+					width: 20vw;
+				}
 
 				img {
 					height: auto;
 					max-width: 63px;
 					object-fit: contain;
 					object-position: center;
+
+					@include to(tablet-h) {
+						max-width: 40px;
+					}
+
+					@include to(movil-h) {
+						max-width: 25px;
+					}
 				}
 
 				span {
@@ -635,26 +677,56 @@
 					line-height: 19px;
 					color: #fff;
 					text-align: center;
+
+					@include to(tablet-h) {
+						font-size: 6px;
+						line-height: 14px;
+						max-width: 54px;
+						text-align: center;
+					}
+
+					br {
+						@include to(movil-h) {
+							display: none;
+						}
+					}
 				}
 
 				&:nth-child(4) {
-					transform: scale(1.6);
-					margin-top: -50px;
+					transform: scale(1.6) translateY(-10px);
+					// margin-top: -50px;
+
+					@include to(tablet-h) {
+						// margin-top: -90px;
+						transform: scale(1.4) translateY(10px);
+					}
 				}
 
 				&:nth-child(1),
 				&:nth-child(7) {
-					margin-top: 200px;
+					transform: translateY(220px);
+
+					@include to(tablet-h) {
+						transform: translateY(180px);
+					}
 				}
 
 				&:nth-child(2),
 				&:nth-child(6) {
-					margin-top: 100px;
+					transform: translateY(120px);
+
+					@include to(tablet-h) {
+						transform: translateY(120px);
+					}
 				}
 
 				&:nth-child(3),
 				&:nth-child(5) {
-					margin-top: 20px;
+					transform: translateY(40px);
+
+					@include to(tablet-h) {
+						transform: translateY(80px);
+					}
 				}
 			}
 		}
