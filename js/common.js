@@ -26,8 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const rect = section__video.getBoundingClientRect();
     const isAtTop = rect.top <= 60 && rect.bottom >= 220;
 
-    console.table(rect);
-
     if (isAtTop) {
       if (window.innerWidth >= 641) {
         desktopVideo.play();
