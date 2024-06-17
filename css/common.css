@@ -937,7 +937,7 @@ video {
 }
 .portlet[data-portlet=zuma] .section2[data-section] {
   width: 100%;
-  height: 490px;
+  height: 520px;
   overflow: hidden;
   background: #006B1D;
 }
