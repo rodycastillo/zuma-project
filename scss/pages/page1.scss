@@ -96,17 +96,23 @@
 		height: 110vh;
 		// min-height: 1300px;
 		overflow: hidden;
-
+		background: #006B1D;
 		position: relative;
 
 
+		@include to(tablet-h) {
+			min-height: 900px;
+		}
+
 		@include to(movil-h) {
+			height: 110vh;
 			min-height: 800px;
 		}
 
 		&:before {
-			width: 330.391px;
+			width: 394px;
 			height: 100%;
+			max-height: 1170px;
 			flex-shrink: 0;
 			position: absolute;
 			z-index: 3;
@@ -118,17 +124,19 @@
 			background-position: top right;
 			background-size: cover;
 
-			@include to(movil-h) {
-				width: 150px;
-				height: 600px;
+			@include to(tablet-h) {
+				width: 110px;
+				height: 621px;
 				background-size: contain;
+				background-image: url('/assets/variants/resource1__left-M.png');
 			}
 		}
 
 
 		&:after {
-			width: 330.391px;
+			width: 400px;
 			height: 100%;
+			max-height: 1170px;
 			flex-shrink: 0;
 			position: absolute;
 			z-index: 3;
@@ -140,10 +148,11 @@
 			background-position: top left;
 			background-size: cover;
 
-			@include to(movil-h) {
-				width: 150px;
-				height: 600px;
+			@include to(tablet-h) {
+				width: 110px;
+				height: 621px;
 				background-size: contain;
+				background-image: url('/assets/variants/resource1__right-M.png');
 			}
 		}
 
@@ -168,6 +177,10 @@
 				background-position: top center;
 				background-size: cover;
 
+				@include to(movil-h) {
+					height: 33%;
+				}
+
 			}
 
 			&__logo {
@@ -177,6 +190,10 @@
 				right: 0;
 				z-index: 4;
 				margin: 0 auto;
+
+				@include to(movil-h) {
+					display: none;
+				}
 			}
 
 
@@ -193,6 +210,45 @@
 				color: #fff;
 				line-height: 50px;
 				text-transform: uppercase;
+
+				@include to(tablet-h) {
+					font-size: 34px;
+					line-height: 40px;
+				}
+
+				@include to(movil-h) {
+					font-size: 23px;
+					line-height: 29px;
+					max-width: 300px;
+					text-transform: initial;
+					top: 17%;
+					z-index: 5;
+				}
+			}
+
+			.brands {
+				position: absolute;
+				bottom: 10%;
+				z-index: 10;
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+
+				width: 755.004px;
+				height: 86.001px;
+
+				@include to(tablet) {
+					width: 276.895px;
+					height: 36px;
+					bottom: 8%;
+				}
+
+				img {
+					width: inherit;
+					height: inherit;
+					object-fit: contain;
+					object-position: center;
+				}
 			}
 
 			@keyframes bobble {
@@ -201,7 +257,7 @@
 				}
 
 				50% {
-					transform: translateY(40px);
+					transform: translateY(30px);
 				}
 
 				100% {
@@ -225,12 +281,12 @@
 					&:hover {
 						opacity: 1;
 						transition: all 0.3s ease;
-						// transform: translateY(-5px);
 						filter: grayscale(0px);
+					}
 
-						@include to(movil-h) {
-							transform: none;
-						}
+					@include to(movil-h) {
+						opacity: 1;
+						filter: grayscale(0px);
 					}
 				}
 
@@ -250,6 +306,13 @@
 					margin: 0 auto;
 					cursor: pointer;
 					transform: translateX(-330px);
+
+					@include to(movil-h) {
+						transform: translateX(-105px);
+						width: 45px;
+						height: 45px;
+						top: 40%;
+					}
 				}
 
 				&__right {
@@ -267,6 +330,13 @@
 					margin: 0 auto;
 					cursor: pointer;
 					transform: translateX(350px);
+
+					@include to(movil-h) {
+						transform: translateX(105px);
+						width: 45px;
+						height: 45px;
+						top: 40%;
+					}
 				}
 
 				&__down {
@@ -289,7 +359,11 @@
 					-webkit-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
 					-moz-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
 
-
+					@include to(movil-h) {
+						width: 51px;
+						height: 49.406px;
+						bottom: 27%;
+					}
 				}
 			}
 		}
@@ -299,6 +373,7 @@
 			height: inherit;
 			// background-color: red;
 			position: relative;
+			// z-index: 10;
 
 
 			display: flex;
@@ -320,6 +395,13 @@
 				justify-content: center;
 				flex-direction: row;
 				align-items: center;
+
+				@include to(movil-h) {
+					align-items: flex-start;
+					padding-top: 7.5%;
+				}
+
+
 
 				&.v1 {
 					background-image: url('/assets/background/slides/fondo1.jpg');
@@ -353,6 +435,10 @@
 					align-items: center;
 					gap: 10px;
 
+					@include to(movil-h) {
+						flex-direction: column;
+					}
+
 					// padding-top: 18%;
 
 					&__img {
@@ -360,14 +446,30 @@
 						height: 350px;
 						transform: rotate(15.284deg);
 						flex-shrink: 0;
+
+						@include to(tablet-h) {
+							max-height: 38vh;
+						}
+
+						@include to(movil-h) {
+							height: 270px;
+						}
 					}
 
 					&__content {
+						position: relative;
+						z-index: 100;
+
 						h2 {
 							font: normal 500 40px $font5;
 							color: #fff;
 							line-height: 60px;
 							text-transform: uppercase;
+
+							@include to(movil-h) {
+								font-size: 22px;
+								line-height: 33px;
+							}
 						}
 
 						p {
@@ -375,9 +477,18 @@
 								font: normal 700 20px $font4;
 								line-height: 25px;
 
+								@include to(movil-h) {
+									font-size: 10.622px;
+									line-height: 13px;
+								}
+
 								&.c {
 									font-size: 30px;
+
 									// line-height: ;
+									@include to(movil-h) {
+										font-size: 15.933px;
+									}
 								}
 							}
 
@@ -446,6 +557,11 @@
 								width: 16px;
 								height: 18px;
 							}
+
+							@include to(movil-h) {
+								display: none;
+							}
+
 						}
 					}
 				}
@@ -560,6 +676,10 @@
 			background-repeat: no-repeat;
 			background-position: top;
 			background-size: 100%;
+
+			@include to(movil-h) {
+				top: -3%;
+			}
 		}
 
 		&::before {
@@ -587,6 +707,7 @@
 			width: 100%;
 			z-index: 2;
 			position: relative;
+			overflow: hidden;
 
 			&:before {
 				position: absolute;
@@ -607,6 +728,7 @@
 					top: auto;
 					bottom: 1%;
 					height: 600px;
+					left: -100px;
 				}
 
 				@include to(movil-h) {
@@ -614,6 +736,7 @@
 					width: 120px;
 					height: 506px;
 					top: auto;
+					left: 0;
 					bottom: 2%;
 					// left: -50%;
 				}
@@ -637,6 +760,7 @@
 					width: 250px;
 					top: auto;
 					bottom: 1%;
+					right: -100px;
 					height: 600px;
 				}
 
@@ -646,6 +770,7 @@
 					height: 538px;
 					// right: -50%;
 					top: auto;
+					right: 0;
 					bottom: 3%;
 				}
 			}
@@ -801,6 +926,11 @@
 					font: normal 500 44px $font5;
 					line-height: 62px;
 					text-transform: uppercase;
+
+					@include to(tablet-h) {
+						font-size: 34px;
+						line-height: 42px;
+					}
 
 					@include to(movil-h) {
 						font-size: 20px;
@@ -1022,6 +1152,8 @@
 		width: 100%;
 		height: fit-content;
 		background: #004513;
+		position: relative;
+		z-index: 2;
 
 		// display: none;
 

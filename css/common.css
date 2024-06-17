@@ -428,16 +428,24 @@ video {
   width: 100%;
   height: 110vh;
   overflow: hidden;
+  background: #006B1D;
   position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .portlet[data-portlet=zuma] .section1[data-section] {
+    min-height: 900px;
+  }
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section1[data-section] {
+    height: 110vh;
     min-height: 800px;
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section]:before {
-  width: 330.391px;
+  width: 394px;
   height: 100%;
+  max-height: 1170px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: absolute;
@@ -450,16 +458,18 @@ video {
   background-position: top right;
   background-size: cover;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .portlet[data-portlet=zuma] .section1[data-section]:before {
-    width: 150px;
-    height: 600px;
+    width: 110px;
+    height: 621px;
     background-size: contain;
+    background-image: url("/assets/variants/resource1__left-M.png");
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section]:after {
-  width: 330.391px;
+  width: 400px;
   height: 100%;
+  max-height: 1170px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: absolute;
@@ -472,11 +482,12 @@ video {
   background-position: top left;
   background-size: cover;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .portlet[data-portlet=zuma] .section1[data-section]:after {
-    width: 150px;
-    height: 600px;
+    width: 110px;
+    height: 621px;
     background-size: contain;
+    background-image: url("/assets/variants/resource1__right-M.png");
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main {
@@ -498,6 +509,11 @@ video {
   background-position: top center;
   background-size: cover;
 }
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main::after {
+    height: 33%;
+  }
+}
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main__logo {
   position: absolute;
   top: 13%;
@@ -505,6 +521,11 @@ video {
   right: 0;
   z-index: 4;
   margin: 0 auto;
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main__logo {
+    display: none;
+  }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main h1 {
   position: absolute;
@@ -520,14 +541,55 @@ video {
   line-height: 50px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1024px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main h1 {
+    font-size: 23px;
+    line-height: 29px;
+    max-width: 300px;
+    text-transform: initial;
+    top: 17%;
+    z-index: 5;
+  }
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands {
+  position: absolute;
+  bottom: 10%;
+  z-index: 10;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 755.004px;
+  height: 86.001px;
+}
+@media screen and (max-width: 768px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands {
+    width: 276.895px;
+    height: 36px;
+    bottom: 8%;
+  }
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands img {
+  width: inherit;
+  height: inherit;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
 @-webkit-keyframes bobble {
   0% {
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
   }
   50% {
-    -webkit-transform: translateY(40px);
-            transform: translateY(40px);
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
   100% {
     -webkit-transform: translateY(10px);
@@ -540,8 +602,8 @@ video {
             transform: translateY(10px);
   }
   50% {
-    -webkit-transform: translateY(40px);
-            transform: translateY(40px);
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
   100% {
     -webkit-transform: translateY(10px);
@@ -565,9 +627,10 @@ video {
           filter: grayscale(0px);
 }
 @media screen and (max-width: 640px) {
-  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left:hover, .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right:hover {
-    -webkit-transform: none;
-            transform: none;
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left, .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right {
+    opacity: 1;
+    -webkit-filter: grayscale(0px);
+            filter: grayscale(0px);
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left {
@@ -586,6 +649,15 @@ video {
   -webkit-transform: translateX(-330px);
           transform: translateX(-330px);
 }
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left {
+    -webkit-transform: translateX(-105px);
+            transform: translateX(-105px);
+    width: 45px;
+    height: 45px;
+    top: 40%;
+  }
+}
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right {
   position: absolute;
   z-index: 5;
@@ -601,6 +673,15 @@ video {
   cursor: pointer;
   -webkit-transform: translateX(350px);
           transform: translateX(350px);
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right {
+    -webkit-transform: translateX(105px);
+            transform: translateX(105px);
+    width: 45px;
+    height: 45px;
+    top: 40%;
+  }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__down {
   position: absolute;
@@ -627,6 +708,13 @@ video {
   box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__down {
+    width: 51px;
+    height: 49.406px;
+    bottom: 27%;
+  }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider {
   width: 100%;
@@ -658,6 +746,14 @@ video {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 7.5%;
+  }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v1 {
   background-image: url("/assets/background/slides/fondo1.jpg");
@@ -693,6 +789,14 @@ video {
           align-items: center;
   gap: 10px;
 }
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__img {
   height: 350px;
   -webkit-transform: rotate(15.284deg);
@@ -700,18 +804,49 @@ video {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+@media screen and (max-width: 1024px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__img {
+    max-height: 38vh;
+  }
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__img {
+    height: 270px;
+  }
+}
+.portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content {
+  position: relative;
+  z-index: 100;
+}
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content h2 {
   font: normal 500 40px "Gotham-Black";
   color: #fff;
   line-height: 60px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content h2 {
+    font-size: 22px;
+    line-height: 33px;
+  }
+}
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span {
   font: normal 700 20px "Gotham-Book";
   line-height: 25px;
 }
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span {
+    font-size: 10.622px;
+    line-height: 13px;
+  }
+}
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span.c {
   font-size: 30px;
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span.c {
+    font-size: 15.933px;
+  }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p.v1 {
   color: #FAAEFF;
@@ -779,6 +914,11 @@ video {
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content .toScrollStores img {
   width: 16px;
   height: 18px;
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content .toScrollStores {
+    display: none;
+  }
 }
 .portlet[data-portlet=zuma] .section2[data-section] {
   width: 100%;
@@ -885,6 +1025,11 @@ video {
   background-position: top;
   background-size: 100%;
 }
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section3[data-section]:after {
+    top: -3%;
+  }
+}
 .portlet[data-portlet=zuma] .section3[data-section]::before {
   position: absolute;
   content: "";
@@ -909,6 +1054,7 @@ video {
   width: 100%;
   z-index: 2;
   position: relative;
+  overflow: hidden;
 }
 .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
   position: absolute;
@@ -929,6 +1075,7 @@ video {
     top: auto;
     bottom: 1%;
     height: 600px;
+    left: -100px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -937,6 +1084,7 @@ video {
     width: 120px;
     height: 506px;
     top: auto;
+    left: 0;
     bottom: 2%;
   }
 }
@@ -958,6 +1106,7 @@ video {
     width: 250px;
     top: auto;
     bottom: 1%;
+    right: -100px;
     height: 600px;
   }
 }
@@ -967,6 +1116,7 @@ video {
     width: 98px;
     height: 538px;
     top: auto;
+    right: 0;
     bottom: 3%;
   }
 }
@@ -1125,6 +1275,12 @@ video {
   font: normal 500 44px "Gotham-Black";
   line-height: 62px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1024px) {
+  .portlet[data-portlet=zuma] .section4[data-section] .section4__main hgroup h2 {
+    font-size: 34px;
+    line-height: 42px;
+  }
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section4[data-section] .section4__main hgroup h2 {
@@ -1364,6 +1520,8 @@ video {
   height: -moz-fit-content;
   height: fit-content;
   background: #004513;
+  position: relative;
+  z-index: 2;
 }
 .portlet[data-portlet=zuma] .section6[data-section] .section6__main {
   width: 90%;
