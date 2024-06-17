@@ -1117,7 +1117,7 @@ video {
 }
 .portlet[data-portlet=zuma] .section2[data-section] .brands {
   position: absolute;
-  top: 0px;
+  top: 20px;
   z-index: 10;
   margin: 0 auto;
   left: 0;
@@ -1127,6 +1127,7 @@ video {
 }
 @media screen and (max-width: 1689px) {
   .portlet[data-portlet=zuma] .section2[data-section] .brands {
+    top: 10px;
     width: 555.004px;
     height: 66.001px;
   }
