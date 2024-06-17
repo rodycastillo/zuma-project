@@ -1107,7 +1107,7 @@ video {
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] {
-    height: 400px;
+    height: 420px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1154,7 +1154,7 @@ video {
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main {
-    padding-top: 100px;
+    padding-top: 120px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1288,8 +1288,8 @@ video {
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(1), .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(7) {
-    -webkit-transform: translateY(180px);
-            transform: translateY(180px);
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
   }
 }
 .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(2), .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(6) {

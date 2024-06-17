@@ -718,7 +718,7 @@
 		}
 
 		@include to(tablet-h) {
-			height: 400px;
+			height: 420px;
 		}
 
 		@include to(movil-h) {
@@ -766,7 +766,7 @@
 			padding: 130px 0 30px;
 
 			@include to(tablet-h) {
-				padding-top: 100px;
+				padding-top: 120px;
 			}
 
 			@include to(movil-h) {
@@ -880,7 +880,7 @@
 					transform: translateY(220px);
 
 					@include to(tablet-h) {
-						transform: translateY(180px);
+						transform: translateY(150px);
 					}
 				}
 
