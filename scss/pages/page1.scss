@@ -161,25 +161,28 @@
 
 	.section1[data-section] {
 		width: 100%;
-		height: 110vh;
-		// min-height: 1300px;
-		min-height: 1100px;
+		// height: 110vh;
+		height: fit-content;
+		// min-height: 1350px;
+		// min-height: 1100px;
 		overflow: hidden;
+		background: #006B1D;
+
 		background: #006B1D;
 		position: relative;
 
 
 		@include to(tablet-h) {
-			min-height: 900px;
+			// min-height: 800px;
 		}
 
 		@include to(movil-h) {
-			height: 110vh;
-			min-height: 800px;
+			// height: 110vh;
+			// min-height: 800px;
 		}
 
 		&:before {
-			width: 394px;
+			width: 363px;
 			height: 100%;
 			max-height: 1170px;
 			flex-shrink: 0;
@@ -209,7 +212,7 @@
 
 
 		&:after {
-			width: 400px;
+			width: 383px;
 			height: 100%;
 			max-height: 1170px;
 			flex-shrink: 0;
@@ -244,8 +247,8 @@
 			position: relative;
 
 			&::after {
-				position: absolute;
-				content: '';
+				// position: absolute;
+				// content: '';
 				width: 100%;
 				height: 38%;
 				bottom: 0;
@@ -257,7 +260,7 @@
 				background-position: top center;
 				background-size: cover;
 
-				@include to(movil-h) {
+				@include to(tablet) {
 					height: 33%;
 				}
 
@@ -271,7 +274,7 @@
 				z-index: 4;
 				margin: 0 auto;
 
-				@include to(movil-h) {
+				@include to(tablet) {
 					display: none;
 				}
 			}
@@ -292,11 +295,11 @@
 				text-transform: uppercase;
 
 				@include to(tablet-h) {
-					font-size: 34px;
+					font-size: 30px;
 					line-height: 40px;
 				}
 
-				@include to(movil-h) {
+				@include to(tablet) {
 					font-size: 23px;
 					line-height: 29px;
 					max-width: 300px;
@@ -308,7 +311,7 @@
 
 			.brands {
 				position: absolute;
-				bottom: 5%;
+				bottom: 0px;
 				z-index: 10;
 				margin: 0 auto;
 				left: 0;
@@ -318,13 +321,13 @@
 				height: 86.001px;
 
 				@include to(1690px) {
-					bottom: 6%;
+					// bottom: 6%;
 				}
 
 				@include to(tablet) {
 					width: 276.895px;
 					height: 36px;
-					bottom: 8%;
+					// bottom: 8%;
 				}
 
 				img {
@@ -368,7 +371,7 @@
 						filter: grayscale(0px);
 					}
 
-					@include to(movil-h) {
+					@include to(tablet) {
 						opacity: 1;
 						filter: grayscale(0px);
 					}
@@ -391,11 +394,11 @@
 					cursor: pointer;
 					transform: translateX(-330px);
 
-					@include to(movil-h) {
+					@include to(tablet) {
 						transform: translateX(-105px);
-						width: 45px;
-						height: 45px;
-						top: 40%;
+						// width: 45px;
+						// height: 45px;
+						top: 42%;
 					}
 				}
 
@@ -415,11 +418,11 @@
 					cursor: pointer;
 					transform: translateX(350px);
 
-					@include to(movil-h) {
+					@include to(tablet) {
 						transform: translateX(105px);
-						width: 45px;
-						height: 45px;
-						top: 40%;
+						// width: 45px;
+						// height: 45px;
+						top: 42%;
 					}
 				}
 
@@ -443,10 +446,10 @@
 					-webkit-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
 					-moz-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
 
-					@include to(movil-h) {
+					@include to(tablet-h) {
 						width: 51px;
 						height: 49.406px;
-						bottom: 27%;
+						bottom: 18%;
 					}
 				}
 			}
@@ -462,8 +465,19 @@
 
 			display: flex;
 			width: fit-content;
+
+			height: 1150px;
 			// overflow: scroll;
 			// transition: transform 1s ease;
+
+
+			@include to(tablet-w) {
+				height: 750px;
+			}
+
+			@include to(tablet) {
+				height: 700px;
+			}
 
 
 
@@ -480,10 +494,24 @@
 				flex-direction: row;
 				align-items: center;
 
-				@include to(movil-h) {
+				@include to(laptop) {
+					padding-top: 2%;
+				}
+
+				@include to(tablet-h) {
+					// align-items: flex-start;
+					padding-top: 3%;
+				}
+
+				@include to(tablet) {
 					align-items: flex-start;
+					padding-top: 4%;
+				}
+
+				@include to(movil-h) {
 					padding-top: 7.5%;
 				}
+
 
 
 
@@ -570,7 +598,7 @@
 					align-items: center;
 					gap: 10px;
 
-					@include to(movil-h) {
+					@include to(tablet) {
 						flex-direction: column;
 					}
 
@@ -586,7 +614,7 @@
 							max-height: 38vh;
 						}
 
-						@include to(movil-h) {
+						@include to(tablet) {
 							height: 270px;
 						}
 					}
@@ -601,7 +629,7 @@
 							line-height: 60px;
 							text-transform: uppercase;
 
-							@include to(movil-h) {
+							@include to(tablet) {
 								font-size: 22px;
 								line-height: 33px;
 							}
@@ -612,7 +640,7 @@
 								font: normal 700 20px $font4;
 								line-height: 25px;
 
-								@include to(movil-h) {
+								@include to(tablet) {
 									font-size: 10.622px;
 									line-height: 13px;
 								}
@@ -621,7 +649,7 @@
 									font-size: 30px;
 
 									// line-height: ;
-									@include to(movil-h) {
+									@include to(tablet) {
 										font-size: 15.933px;
 									}
 								}
@@ -679,7 +707,7 @@
 								transform: translateY(-5px);
 								filter: grayscale(0px);
 
-								@include to(movil-h) {
+								@include to(tablet) {
 									transform: none;
 								}
 							}
@@ -695,7 +723,7 @@
 								height: 18px;
 							}
 
-							@include to(movil-h) {
+							@include to(tablet) {
 								display: none;
 							}
 
@@ -713,21 +741,21 @@
 		background: #006B1D;
 
 		@include to(tablet-h) {
-			height: 400px;
+			height: 300px;
 		}
 
 		@include to(movil-h) {
-			height: 300px;
+			height: 240px;
 		}
 
 		.section2__main {
 			width: 100%;
 			text-align: center;
 			min-height: 300px;
-			padding: 30px 0;
+			padding: 50px 0 30px;
 
 			@include to(movil-h) {
-				padding: 0;
+				padding-top: 40px;
 			}
 
 			hgroup {
@@ -738,7 +766,7 @@
 					text-align: center;
 					text-transform: uppercase;
 
-					@include to(movil-h) {
+					@include to(tablet) {
 						font-size: 20px;
 						line-height: 50px;
 					}
@@ -763,7 +791,7 @@
 					margin-top: 0;
 				}
 
-				@include to(movil-h) {
+				@include to(tablet) {
 					gap: 35px;
 					justify-content: space-between;
 					padding: 0 5px;
@@ -783,7 +811,7 @@
 				gap: 7px;
 				// transition: transform .1s ease-in-out;
 
-				@include to(movil-h) {
+				@include to(tablet) {
 					width: 20vw;
 				}
 
@@ -797,7 +825,7 @@
 						max-width: 40px;
 					}
 
-					@include to(movil-h) {
+					@include to(tablet) {
 						max-width: 25px;
 					}
 				}
@@ -816,7 +844,7 @@
 					}
 
 					br {
-						@include to(movil-h) {
+						@include to(tablet) {
 							display: none;
 						}
 					}
@@ -846,7 +874,7 @@
 					transform: translateY(120px);
 
 					@include to(tablet-h) {
-						transform: translateY(120px);
+						transform: translateY(76px);
 					}
 				}
 
@@ -855,7 +883,7 @@
 					transform: translateY(40px);
 
 					@include to(tablet-h) {
-						transform: translateY(80px);
+						transform: translateY(45px);
 					}
 				}
 			}
@@ -1007,7 +1035,7 @@
 					color: #fff;
 					text-align: center;
 
-					@include to(movil-h) {
+					@include to(tablet) {
 						font-size: 20px;
 						line-height: 50px;
 					}
@@ -1062,7 +1090,7 @@
 				video {
 					width: 100%;
 					height: 100%;
-					object-fit: contain;
+					object-fit: fill;
 					object-position: center;
 
 
@@ -1091,9 +1119,9 @@
 				margin: 64px auto 0;
 
 				@include to(movil-h) {
-					width: 310.613px;
-					height: 36.034px;
-					max-width: 90%;
+					width: 340px;
+					height: 45px;
+					max-width: 95%;
 					margin-top: 30px;
 				}
 

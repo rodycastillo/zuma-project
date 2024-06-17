@@ -538,25 +538,16 @@ video {
 }
 .portlet[data-portlet=zuma] .section1[data-section] {
   width: 100%;
-  height: 110vh;
-  min-height: 1100px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow: hidden;
+  background: #006B1D;
   background: #006B1D;
   position: relative;
 }
-@media screen and (max-width: 1199px) {
-  .portlet[data-portlet=zuma] .section1[data-section] {
-    min-height: 900px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .portlet[data-portlet=zuma] .section1[data-section] {
-    height: 110vh;
-    min-height: 800px;
-  }
-}
 .portlet[data-portlet=zuma] .section1[data-section]:before {
-  width: 394px;
+  width: 363px;
   height: 100%;
   max-height: 1170px;
   -ms-flex-negative: 0;
@@ -587,7 +578,7 @@ video {
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section]:after {
-  width: 400px;
+  width: 383px;
   height: 100%;
   max-height: 1170px;
   -ms-flex-negative: 0;
@@ -624,8 +615,6 @@ video {
   position: relative;
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main::after {
-  position: absolute;
-  content: "";
   width: 100%;
   height: 38%;
   bottom: 0;
@@ -636,7 +625,7 @@ video {
   background-position: top center;
   background-size: cover;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main::after {
     height: 33%;
   }
@@ -649,7 +638,7 @@ video {
   z-index: 4;
   margin: 0 auto;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main__logo {
     display: none;
   }
@@ -670,11 +659,11 @@ video {
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main h1 {
-    font-size: 34px;
+    font-size: 30px;
     line-height: 40px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main h1 {
     font-size: 23px;
     line-height: 29px;
@@ -686,7 +675,7 @@ video {
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands {
   position: absolute;
-  bottom: 5%;
+  bottom: 0px;
   z-index: 10;
   margin: 0 auto;
   left: 0;
@@ -694,16 +683,10 @@ video {
   width: 755.004px;
   height: 86.001px;
 }
-@media screen and (max-width: 1689px) {
-  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands {
-    bottom: 6%;
-  }
-}
 @media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands {
     width: 276.895px;
     height: 36px;
-    bottom: 8%;
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands img {
@@ -757,7 +740,7 @@ video {
   -webkit-filter: grayscale(0px);
           filter: grayscale(0px);
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left, .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right {
     opacity: 1;
     -webkit-filter: grayscale(0px);
@@ -780,13 +763,11 @@ video {
   -webkit-transform: translateX(-330px);
           transform: translateX(-330px);
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left {
     -webkit-transform: translateX(-105px);
             transform: translateX(-105px);
-    width: 45px;
-    height: 45px;
-    top: 40%;
+    top: 42%;
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right {
@@ -805,13 +786,11 @@ video {
   -webkit-transform: translateX(350px);
           transform: translateX(350px);
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right {
     -webkit-transform: translateX(105px);
             transform: translateX(105px);
-    width: 45px;
-    height: 45px;
-    top: 40%;
+    top: 42%;
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__down {
@@ -840,11 +819,11 @@ video {
   -webkit-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__down {
     width: 51px;
     height: 49.406px;
-    bottom: 27%;
+    bottom: 18%;
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider {
@@ -857,6 +836,17 @@ video {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: 1150px;
+}
+@media screen and (max-width: 1341px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider {
+    height: 750px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider {
+    height: 700px;
+  }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
   width: 100vw;
@@ -878,11 +868,26 @@ video {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1366px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
+    padding-top: 2%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
+    padding-top: 3%;
+  }
+}
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    padding-top: 4%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
     padding-top: 7.5%;
   }
 }
@@ -980,7 +985,7 @@ video {
           align-items: center;
   gap: 10px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1000,7 +1005,7 @@ video {
     max-height: 38vh;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__img {
     height: 270px;
   }
@@ -1015,7 +1020,7 @@ video {
   line-height: 60px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content h2 {
     font-size: 22px;
     line-height: 33px;
@@ -1025,7 +1030,7 @@ video {
   font: normal 700 20px "Gotham-Book";
   line-height: 25px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span {
     font-size: 10.622px;
     line-height: 13px;
@@ -1034,7 +1039,7 @@ video {
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span.c {
   font-size: 30px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span.c {
     font-size: 15.933px;
   }
@@ -1092,7 +1097,7 @@ video {
   -webkit-filter: grayscale(0px);
           filter: grayscale(0px);
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content .toScrollStores:hover {
     -webkit-transform: none;
             transform: none;
@@ -1107,7 +1112,7 @@ video {
   width: 16px;
   height: 18px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content .toScrollStores {
     display: none;
   }
@@ -1120,23 +1125,23 @@ video {
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] {
-    height: 400px;
+    height: 300px;
   }
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section2[data-section] {
-    height: 300px;
+    height: 240px;
   }
 }
 .portlet[data-portlet=zuma] .section2[data-section] .section2__main {
   width: 100%;
   text-align: center;
   min-height: 300px;
-  padding: 30px 0;
+  padding: 50px 0 30px;
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main {
-    padding: 0;
+    padding-top: 40px;
   }
 }
 .portlet[data-portlet=zuma] .section2[data-section] .section2__main hgroup h2 {
@@ -1146,7 +1151,7 @@ video {
   text-align: center;
   text-transform: uppercase;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main hgroup h2 {
     font-size: 20px;
     line-height: 50px;
@@ -1177,7 +1182,7 @@ video {
     margin-top: 0;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__list {
     gap: 35px;
     -webkit-box-pack: justify;
@@ -1207,7 +1212,7 @@ video {
           justify-content: center;
   gap: 7px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item {
     width: 20vw;
   }
@@ -1225,7 +1230,7 @@ video {
     max-width: 40px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item img {
     max-width: 25px;
   }
@@ -1244,7 +1249,7 @@ video {
     text-align: center;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item span br {
     display: none;
   }
@@ -1275,8 +1280,8 @@ video {
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(2), .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(6) {
-    -webkit-transform: translateY(120px);
-            transform: translateY(120px);
+    -webkit-transform: translateY(76px);
+            transform: translateY(76px);
   }
 }
 .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(3), .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(5) {
@@ -1285,8 +1290,8 @@ video {
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(3), .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(5) {
-    -webkit-transform: translateY(80px);
-            transform: translateY(80px);
+    -webkit-transform: translateY(45px);
+            transform: translateY(45px);
   }
 }
 .portlet[data-portlet=zuma] .section3[data-section] {
@@ -1428,7 +1433,7 @@ video {
   color: #fff;
   text-align: center;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main hgroup h2 {
     font-size: 20px;
     line-height: 50px;
@@ -1482,8 +1487,8 @@ video {
 .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video video {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: fill;
+     object-fit: fill;
   -o-object-position: center;
      object-position: center;
 }
@@ -1512,9 +1517,9 @@ video {
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main__resources {
-    width: 310.613px;
-    height: 36.034px;
-    max-width: 90%;
+    width: 340px;
+    height: 45px;
+    max-width: 95%;
     margin-top: 30px;
   }
 }

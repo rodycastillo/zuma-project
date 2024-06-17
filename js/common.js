@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     prevSlide();
     startAutoplay();
   });
-  startAutoplay();
+  // startAutoplay();
 
 
 });
