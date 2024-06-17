@@ -544,7 +544,7 @@ video {
   background: #006B1D;
   position: relative;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] {
     min-height: 900px;
   }
@@ -578,7 +578,7 @@ video {
     width: 340px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section]:before {
     width: 110px;
     height: 621px;
@@ -609,7 +609,7 @@ video {
     width: 340px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section]:after {
     width: 110px;
     height: 621px;
@@ -668,7 +668,7 @@ video {
   line-height: 50px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main h1 {
     font-size: 34px;
     line-height: 40px;
@@ -748,7 +748,6 @@ video {
   transition: all 0.3s ease;
   -webkit-filter: grayscale(3px);
           filter: grayscale(3px);
-  border: 1.2px solid #fff;
   border-radius: 100%;
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left:hover, .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right:hover {
@@ -936,7 +935,7 @@ video {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__img {
     max-height: 38vh;
   }
@@ -1059,7 +1058,7 @@ video {
   overflow: hidden;
   background: #006B1D;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] {
     height: 400px;
   }
@@ -1105,7 +1104,14 @@ video {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1366px) {
+  .portlet[data-portlet=zuma] .section2[data-section] .section2__main__list {
+    gap: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__list {
     gap: 40px;
     margin-top: 0;
@@ -1154,7 +1160,7 @@ video {
   -o-object-position: center;
      object-position: center;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item img {
     max-width: 40px;
   }
@@ -1170,7 +1176,7 @@ video {
   color: #fff;
   text-align: center;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item span {
     font-size: 6px;
     line-height: 14px;
@@ -1187,7 +1193,7 @@ video {
   -webkit-transform: scale(1.6) translateY(-10px);
           transform: scale(1.6) translateY(-10px);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(4) {
     -webkit-transform: scale(1.4) translateY(10px);
             transform: scale(1.4) translateY(10px);
@@ -1197,7 +1203,7 @@ video {
   -webkit-transform: translateY(220px);
           transform: translateY(220px);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(1), .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(7) {
     -webkit-transform: translateY(180px);
             transform: translateY(180px);
@@ -1207,7 +1213,7 @@ video {
   -webkit-transform: translateY(120px);
           transform: translateY(120px);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(2), .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(6) {
     -webkit-transform: translateY(120px);
             transform: translateY(120px);
@@ -1217,7 +1223,7 @@ video {
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(3), .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(5) {
     -webkit-transform: translateY(80px);
             transform: translateY(80px);
@@ -1298,7 +1304,7 @@ video {
     top: 10%;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
     width: 250px;
     top: auto;
@@ -1337,7 +1343,7 @@ video {
     top: 10%;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {
     width: 250px;
     top: auto;
@@ -1376,7 +1382,7 @@ video {
   text-align: left;
   margin: 49px auto 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main hgroup p {
     max-width: 90%;
   }
@@ -1398,7 +1404,7 @@ video {
   border-radius: 20px;
   overflow: hidden;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
     height: auto;
   }
@@ -1512,7 +1518,7 @@ video {
   line-height: 62px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section4[data-section] .section4__main hgroup h2 {
     font-size: 34px;
     line-height: 42px;
@@ -1582,7 +1588,7 @@ video {
       flex-wrap: wrap;
   gap: 109px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section5[data-section] .section5__main__stores {
     gap: 50px;
   }

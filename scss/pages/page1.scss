@@ -357,7 +357,7 @@
 					opacity: .5;
 					transition: all 0.3s ease;
 					filter: grayscale(3px);
-					border: 1.2px solid #fff;
+					// border: 1.2px solid #fff;
 
 					// background-color: #fff;
 					border-radius: 100%;
@@ -701,6 +701,11 @@
 				gap: 120px;
 				flex-wrap: wrap;
 				// transition: transform .5s ease-in-out;
+
+				@include to(laptop) {
+					gap: 0;
+					justify-content: space-around;
+				}
 
 				@include to(tablet-h) {
 					gap: 40px;
