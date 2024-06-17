@@ -415,6 +415,10 @@
 					-webkit-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
 					-moz-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
 
+					@include to(1300px) {
+						bottom: 12%;
+					}
+
 					@include to(tablet-h) {
 						width: 51px;
 						height: 49.406px;

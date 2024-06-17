@@ -794,6 +794,11 @@ video {
   -webkit-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: -1px 0px 52px 5px rgba(0, 0, 0, 0.35);
 }
+@media screen and (max-width: 1299px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__down {
+    bottom: 12%;
+  }
+}
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__down {
     width: 51px;
