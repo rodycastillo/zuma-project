@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  window.addEventListener('scroll', handleScroll);
+  // window.addEventListener('scroll', handleScroll);
 
 
 
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     prevSlide();
     startAutoplay();
   });
-  // startAutoplay();
+  startAutoplay();
 
 
 });

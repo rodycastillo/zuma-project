@@ -167,8 +167,6 @@
 		// min-height: 1100px;
 		overflow: hidden;
 		background: #006B1D;
-
-		background: #006B1D;
 		position: relative;
 
 
@@ -309,35 +307,6 @@
 				}
 			}
 
-			.brands {
-				position: absolute;
-				bottom: 0px;
-				z-index: 10;
-				margin: 0 auto;
-				left: 0;
-				right: 0;
-
-				width: 755.004px;
-				height: 86.001px;
-
-				@include to(1690px) {
-					// bottom: 6%;
-				}
-
-				@include to(tablet) {
-					width: 276.895px;
-					height: 36px;
-					// bottom: 8%;
-				}
-
-				img {
-					width: inherit;
-					height: inherit;
-					object-fit: contain;
-					object-position: center;
-				}
-			}
-
 			@keyframes bobble {
 				0% {
 					transform: translateY(10px);
@@ -449,7 +418,7 @@
 					@include to(tablet-h) {
 						width: 51px;
 						height: 49.406px;
-						bottom: 18%;
+						bottom: 16%;
 					}
 				}
 			}
@@ -637,7 +606,7 @@
 
 						p {
 							span {
-								font: normal 700 20px $font4;
+								font: normal 700 20px $font2;
 								line-height: 25px;
 
 								@include to(tablet) {
@@ -736,9 +705,17 @@
 
 	.section2[data-section] {
 		width: 100%;
-		height: 520px;
+		height: 640px;
 		overflow: hidden;
 		background: #006B1D;
+		position: relative;
+		top: -1px;
+
+
+
+		@include to(tablet-h) {
+			height: 480px;
+		}
 
 		@include to(tablet-h) {
 			height: 300px;
@@ -748,11 +725,48 @@
 			height: 240px;
 		}
 
+		.brands {
+			position: absolute;
+			top: 0px;
+			z-index: 10;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+
+			width: 755.004px;
+			height: 86.001px;
+
+			// display: none;
+
+			@include to(1690px) {
+				// top: -2%;
+				width: 555.004px;
+				height: 66.001px;
+			}
+
+			@include to(tablet) {
+				width: 276.895px;
+				height: 36px;
+				// top: 8%;
+			}
+
+			img {
+				width: inherit;
+				height: inherit;
+				object-fit: contain;
+				object-position: center;
+			}
+		}
+
 		.section2__main {
 			width: 100%;
 			text-align: center;
 			min-height: 300px;
-			padding: 50px 0 30px;
+			padding: 130px 0 30px;
+
+			@include to(tablet-h) {
+				padding-top: 40px;
+			}
 
 			@include to(movil-h) {
 				padding-top: 40px;
@@ -899,6 +913,7 @@
 		height: fit-content;
 		width: 100%;
 		position: relative;
+		top: -2px;
 
 		background: #006B1D;
 

@@ -543,7 +543,6 @@ video {
   height: fit-content;
   overflow: hidden;
   background: #006B1D;
-  background: #006B1D;
   position: relative;
 }
 .portlet[data-portlet=zuma] .section1[data-section]:before {
@@ -673,30 +672,6 @@ video {
     z-index: 5;
   }
 }
-.portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands {
-  position: absolute;
-  bottom: 0px;
-  z-index: 10;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  width: 755.004px;
-  height: 86.001px;
-}
-@media screen and (max-width: 768px) {
-  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands {
-    width: 276.895px;
-    height: 36px;
-  }
-}
-.portlet[data-portlet=zuma] .section1[data-section] .section1__main .brands img {
-  width: inherit;
-  height: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
-}
 @-webkit-keyframes bobble {
   0% {
     -webkit-transform: translateY(10px);
@@ -823,7 +798,7 @@ video {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__down {
     width: 51px;
     height: 49.406px;
-    bottom: 18%;
+    bottom: 16%;
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider {
@@ -1027,7 +1002,7 @@ video {
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span {
-  font: normal 700 20px "Gotham-Book";
+  font: normal 700 20px "Gotham-Bold";
   line-height: 25px;
 }
 @media screen and (max-width: 768px) {
@@ -1119,9 +1094,16 @@ video {
 }
 .portlet[data-portlet=zuma] .section2[data-section] {
   width: 100%;
-  height: 520px;
+  height: 640px;
   overflow: hidden;
   background: #006B1D;
+  position: relative;
+  top: -1px;
+}
+@media screen and (max-width: 1199px) {
+  .portlet[data-portlet=zuma] .section2[data-section] {
+    height: 480px;
+  }
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] {
@@ -1133,11 +1115,46 @@ video {
     height: 240px;
   }
 }
+.portlet[data-portlet=zuma] .section2[data-section] .brands {
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 755.004px;
+  height: 86.001px;
+}
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section2[data-section] .brands {
+    width: 555.004px;
+    height: 66.001px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .portlet[data-portlet=zuma] .section2[data-section] .brands {
+    width: 276.895px;
+    height: 36px;
+  }
+}
+.portlet[data-portlet=zuma] .section2[data-section] .brands img {
+  width: inherit;
+  height: inherit;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
 .portlet[data-portlet=zuma] .section2[data-section] .section2__main {
   width: 100%;
   text-align: center;
   min-height: 300px;
-  padding: 50px 0 30px;
+  padding: 130px 0 30px;
+}
+@media screen and (max-width: 1199px) {
+  .portlet[data-portlet=zuma] .section2[data-section] .section2__main {
+    padding-top: 40px;
+  }
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main {
@@ -1302,6 +1319,7 @@ video {
   height: fit-content;
   width: 100%;
   position: relative;
+  top: -2px;
   background: #006B1D;
 }
 .portlet[data-portlet=zuma] .section3[data-section]:after {
