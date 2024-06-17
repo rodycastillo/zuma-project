@@ -85,16 +85,85 @@
 	*,
 	*:after,
 	*:before {
-		@include caja-modelo(border-box);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
 	}
 
 	// background: #006B1D;
 	background-color: #005919;
 
+	@keyframes bounceInLeft {
+
+		from,
+		60%,
+		75%,
+		90%,
+		to {
+			animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		}
+
+		0% {
+			opacity: 0;
+			transform: translate3d(-3000px, 0, 0);
+		}
+
+		60% {
+			opacity: 1;
+			transform: translate3d(-5px, 0, 0);
+		}
+
+		75% {
+			transform: translate3d(-10px, 0, 0);
+		}
+
+		90% {
+			transform: translate3d(0px, 0, 0);
+		}
+
+		to {
+			transform: none;
+		}
+	}
+
+	@keyframes bounceInRight {
+
+		from,
+		60%,
+		75%,
+		90%,
+		to {
+			animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		}
+
+		from {
+			opacity: 0;
+			transform: translate3d(3000px, 0, 0);
+		}
+
+		60% {
+			opacity: 1;
+			transform: translate3d(-5px, 0, 0);
+		}
+
+		75% {
+			transform: translate3d(10px, 0, 0);
+		}
+
+		90% {
+			transform: translate3d(0px, 0, 0);
+		}
+
+		to {
+			transform: none;
+		}
+	}
+
 	.section1[data-section] {
 		width: 100%;
 		height: 110vh;
 		// min-height: 1300px;
+		min-height: 1100px;
 		overflow: hidden;
 		background: #006B1D;
 		position: relative;
@@ -124,6 +193,8 @@
 			background-position: top right;
 			background-size: cover;
 
+			animation: bounceInLeft .5s ease-in;
+
 			@include to(1690px) {
 				width: 340px;
 			}
@@ -151,6 +222,7 @@
 			background-repeat: no-repeat;
 			background-position: top left;
 			background-size: cover;
+			animation: bounceInRight .5s ease-in;
 
 			@include to(1690px) {
 				width: 340px;
@@ -175,7 +247,7 @@
 				position: absolute;
 				content: '';
 				width: 100%;
-				height: 40%;
+				height: 38%;
 				bottom: 0;
 				left: 0;
 				right: 0;
@@ -246,7 +318,7 @@
 				height: 86.001px;
 
 				@include to(1690px) {
-					bottom: 8%;
+					bottom: 6%;
 				}
 
 				@include to(tablet) {
@@ -454,7 +526,7 @@
 					// padding-top: 18%;
 
 					&__img {
-						// width: 117.27px;
+						// width: 217.27px;
 						height: 350px;
 						transform: rotate(15.284deg);
 						flex-shrink: 0;
@@ -513,11 +585,13 @@
 							}
 
 							&.v3 {
-								color: #FFD1FD;
+
+								color: #E0FFD8;
 							}
 
 							&.v4 {
 								color: #E0FFD8;
+								color: #FFD1FD;
 							}
 
 							&.v5 {
@@ -626,7 +700,7 @@
 				margin-top: 90px;
 				gap: 120px;
 				flex-wrap: wrap;
-				transition: transform .5s ease-in-out;
+				// transition: transform .5s ease-in-out;
 
 				@include to(tablet-h) {
 					gap: 40px;
@@ -651,7 +725,7 @@
 				align-items: center;
 				justify-content: center;
 				gap: 7px;
-				transition: transform .1s ease-in-out;
+				// transition: transform .1s ease-in-out;
 
 				@include to(movil-h) {
 					width: 20vw;

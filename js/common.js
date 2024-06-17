@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  AOS.init();
+
   // VARIABLES
   const main__portlet = document.querySelector(".portlet[data-portlet=zuma]")
   const toScrollStores = main__portlet.querySelectorAll('.toScrollStores');
@@ -27,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.table(rect);
 
     if (isAtTop) {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth >= 641) {
         desktopVideo.play();
         mobileVideo.pause();
         // mobileVideo.currentTime = 0;
@@ -55,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let lastScrollTop = 0;
 
   const handleScroll = () => {
-    const st = window.pageYOffset || document.documentElement.scrollTop;
+    const st = window.pageYOffset || section.documentElement.scrollTop;
     if (st > lastScrollTop) {
       // Scroll down
       list.appendChild(list.firstElementChild);
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add active class to the new first element
     items.forEach((item, index) => {
       item.classList.remove('active');
-      if (index === Math.floor(items.length / 2)) {
+      if (index === Math.floor(items.length / 4)) {
         item.classList.add('active');
       }
     });
