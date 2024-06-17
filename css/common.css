@@ -1388,6 +1388,11 @@ video {
     top: 10%;
   }
 }
+@media screen and (max-width: 1289px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
+    left: -140px;
+  }
+}
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
     width: 250px;
@@ -1425,6 +1430,11 @@ video {
     height: 90%;
     width: 380px;
     top: 10%;
+  }
+}
+@media screen and (max-width: 1289px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {
+    right: -140px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -1491,6 +1501,12 @@ video {
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
     height: auto;
+  }
+}
+@media screen and (max-width: 1289px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
+    max-width: 75%;
+    height: 560px;
   }
 }
 @media screen and (max-width: 640px) {

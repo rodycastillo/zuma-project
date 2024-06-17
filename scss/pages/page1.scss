@@ -986,6 +986,10 @@
 					top: 10%;
 				}
 
+				@include to(1290px) {
+					left: -140px;
+				}
+
 				@include to(tablet-h) {
 					width: 250px;
 					top: auto;
@@ -1023,6 +1027,10 @@
 					height: 90%;
 					width: 380px;
 					top: 10%;
+				}
+
+				@include to(1290px) {
+					right: -140px;
 				}
 
 				@include to(tablet-h) {
@@ -1091,6 +1099,11 @@
 
 				@include to(tablet-h) {
 					height: auto;
+				}
+
+				@include to(1290px) {
+					max-width: 75%;
+					height: 560px;
 				}
 
 				@include to(movil-h) {
