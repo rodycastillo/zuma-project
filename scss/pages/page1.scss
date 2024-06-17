@@ -718,11 +718,11 @@
 		}
 
 		@include to(tablet-h) {
-			height: 300px;
+			height: 400px;
 		}
 
 		@include to(movil-h) {
-			height: 240px;
+			height: 260px;
 		}
 
 		.brands {
@@ -766,11 +766,11 @@
 			padding: 130px 0 30px;
 
 			@include to(tablet-h) {
-				padding-top: 40px;
+				padding-top: 100px;
 			}
 
 			@include to(movil-h) {
-				padding-top: 40px;
+				padding-top: 50px;
 			}
 
 			hgroup {

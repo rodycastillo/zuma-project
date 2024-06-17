@@ -1107,12 +1107,12 @@ video {
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] {
-    height: 300px;
+    height: 400px;
   }
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section2[data-section] {
-    height: 240px;
+    height: 260px;
   }
 }
 .portlet[data-portlet=zuma] .section2[data-section] .brands {
@@ -1154,12 +1154,12 @@ video {
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main {
-    padding-top: 40px;
+    padding-top: 100px;
   }
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main {
-    padding-top: 40px;
+    padding-top: 50px;
   }
 }
 .portlet[data-portlet=zuma] .section2[data-section] .section2__main hgroup h2 {
