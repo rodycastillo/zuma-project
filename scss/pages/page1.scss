@@ -489,26 +489,77 @@
 
 				&.v1 {
 					background-image: url('/assets/background/slides/fondo1.jpg');
+
+					@include to(tablet-h) {
+						background-image: url('/assets/background/slides/fondo1-T.jpg');
+					}
+
+					@include to(movil) {
+						background-image: url('/assets/background/slides/fondo1-M.png');
+					}
 				}
 
 				&.v2 {
 					background-image: url('/assets/background/slides/fondo2.jpg');
+
+					@include to(tablet-h) {
+						background-image: url('/assets/background/slides/fondo2-T.jpg');
+					}
+
+
+					@include to(movil) {
+						background-image: url('/assets/background/slides/fondo2-M.png');
+
+					}
 				}
 
 				&.v3 {
 					background-image: url('/assets/background/slides/fondo3.jpg');
+
+					@include to(tablet-h) {
+						background-image: url('/assets/background/slides/fondo3-T.jpg');
+					}
+
+					@include to(movil) {
+						background-image: url('/assets/background/slides/fondo3-M.png');
+					}
+
 				}
 
 				&.v4 {
 					background-image: url('/assets/background/slides/fondo4.jpg');
+
+					@include to(tablet-h) {
+						background-image: url('/assets/background/slides/fondo4-T.jpg');
+					}
+
+					@include to(movil) {
+						background-image: url('/assets/background/slides/fondo4-M.png');
+					}
 				}
 
 				&.v5 {
 					background-image: url('/assets/background/slides/fondo5.jpg');
+
+					@include to(tablet-h) {
+						background-image: url('/assets/background/slides/fondo5-T.jpg');
+					}
+
+					@include to(movil) {
+						background-image: url('/assets/background/slides/fondo5-M.png');
+					}
 				}
 
 				&.v6 {
 					background-image: url('/assets/background/slides/fondo6.jpg');
+
+					@include to(tablet-h) {
+						background-image: url('/assets/background/slides/fondo6-T.jpg');
+					}
+
+					@include to(movil) {
+						background-image: url('/assets/background/slides/fondo6-M.png');
+					}
 				}
 
 

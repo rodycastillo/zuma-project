@@ -889,20 +889,80 @@ video {
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v1 {
   background-image: url("/assets/background/slides/fondo1.jpg");
 }
+@media screen and (max-width: 1199px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v1 {
+    background-image: url("/assets/background/slides/fondo1-T.jpg");
+  }
+}
+@media screen and (max-width: 480px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v1 {
+    background-image: url("/assets/background/slides/fondo1-M.png");
+  }
+}
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v2 {
   background-image: url("/assets/background/slides/fondo2.jpg");
+}
+@media screen and (max-width: 1199px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v2 {
+    background-image: url("/assets/background/slides/fondo2-T.jpg");
+  }
+}
+@media screen and (max-width: 480px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v2 {
+    background-image: url("/assets/background/slides/fondo2-M.png");
+  }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v3 {
   background-image: url("/assets/background/slides/fondo3.jpg");
 }
+@media screen and (max-width: 1199px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v3 {
+    background-image: url("/assets/background/slides/fondo3-T.jpg");
+  }
+}
+@media screen and (max-width: 480px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v3 {
+    background-image: url("/assets/background/slides/fondo3-M.png");
+  }
+}
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v4 {
   background-image: url("/assets/background/slides/fondo4.jpg");
+}
+@media screen and (max-width: 1199px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v4 {
+    background-image: url("/assets/background/slides/fondo4-T.jpg");
+  }
+}
+@media screen and (max-width: 480px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v4 {
+    background-image: url("/assets/background/slides/fondo4-M.png");
+  }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v5 {
   background-image: url("/assets/background/slides/fondo5.jpg");
 }
+@media screen and (max-width: 1199px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v5 {
+    background-image: url("/assets/background/slides/fondo5-T.jpg");
+  }
+}
+@media screen and (max-width: 480px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v5 {
+    background-image: url("/assets/background/slides/fondo5-M.png");
+  }
+}
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v6 {
   background-image: url("/assets/background/slides/fondo6.jpg");
+}
+@media screen and (max-width: 1199px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v6 {
+    background-image: url("/assets/background/slides/fondo6-T.jpg");
+  }
+}
+@media screen and (max-width: 480px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v6 {
+    background-image: url("/assets/background/slides/fondo6-M.png");
+  }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main {
   display: -webkit-box;
