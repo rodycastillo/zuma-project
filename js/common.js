@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let index = elementos.length - 1;
   const showNextGroup = () => {
     contenedor.innerHTML = '';
-    [...Array(5)].forEach((_, i) => {
+    [...Array(window.innerWidth >= 1024 ? 7 : 5)].forEach((_, i) => {
       const currentIndex = (index - i + elementos.length) % elementos.length;
       const elemento = elementos[currentIndex];
       const nuevoElemento = elemento.cloneNode(true);
