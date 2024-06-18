@@ -157,11 +157,12 @@ document.addEventListener("DOMContentLoaded", function () {
     cssEase: 'linear',
     // variableWidth: true
     // centerPadding: '60px',
+    // rtl: true,
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 3,
           variableWidth: false,
         }
       }
