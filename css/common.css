@@ -993,6 +993,12 @@ video {
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content {
   position: relative;
   z-index: 100;
+  min-width: 352px;
+}
+@media screen and (max-width: 768px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content {
+    min-width: 200px;
+  }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content h2 {
   font: normal 500 40px "Gotham-Black";

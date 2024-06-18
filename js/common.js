@@ -112,14 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
   nextButton.addEventListener('click', () => {
     stopAutoplay();
     nextSlide();
-    startAutoplay();
+    // startAutoplay();
   });
   prevButton.addEventListener('click', () => {
     stopAutoplay();
     prevSlide();
-    startAutoplay();
+    // startAutoplay();
   });
-  startAutoplay();
+  // startAutoplay();
 
 
   // const contenedor = document.querySelector('.section2__main__list');
