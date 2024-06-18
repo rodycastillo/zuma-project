@@ -997,7 +997,7 @@ video {
 }
 @media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content {
-    min-width: 200px;
+    min-width: auto;
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content h2 {

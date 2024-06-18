@@ -598,7 +598,7 @@
 						min-width: 352px;
 
 						@include to(tablet) {
-							min-width: 200px;
+							min-width: auto;
 						}
 
 						h2 {
