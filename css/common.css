@@ -1326,6 +1326,12 @@ video {
     text-align: center;
   }
 }
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item span {
+    font-size: 6px;
+    line-height: 9px;
+  }
+}
 @media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item span br {
     display: none;

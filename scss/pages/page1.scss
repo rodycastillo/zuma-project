@@ -951,6 +951,11 @@
 						text-align: center;
 					}
 
+					@include to(movil-h) {
+						font-size: 6px;
+						line-height: 9px;
+					}
+
 					br {
 						@include to(tablet) {
 							display: none;
