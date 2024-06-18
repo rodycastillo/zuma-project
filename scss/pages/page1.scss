@@ -903,7 +903,7 @@
 				// transition: transform .1s ease-in-out;
 
 				width: 20vw;
-				animation: fadeIn 0.5s ease forwards;
+				animation: fadeIn 1s ease forwards;
 				opacity: .5;
 
 				@include to(tablet) {
@@ -964,7 +964,7 @@
 
 				&:nth-child(3) {
 					transform: scale(1.6);
-					animation: fadeIn1 0.5s ease forwards;
+					animation: fadeIn1 1.5s ease forwards;
 					opacity: 1;
 
 					@include to(tablet-h) {

@@ -1269,8 +1269,8 @@ video {
           justify-content: center;
   gap: 7px;
   width: 20vw;
-  -webkit-animation: fadeIn 0.5s ease forwards;
-          animation: fadeIn 0.5s ease forwards;
+  -webkit-animation: fadeIn 1s ease forwards;
+          animation: fadeIn 1s ease forwards;
   opacity: 0.5;
 }
 @media screen and (max-width: 768px) {
@@ -1338,8 +1338,8 @@ video {
 .portlet[data-portlet=zuma] .section2[data-section] .section2__main__item:nth-child(3) {
   -webkit-transform: scale(1.6);
           transform: scale(1.6);
-  -webkit-animation: fadeIn1 0.5s ease forwards;
-          animation: fadeIn1 0.5s ease forwards;
+  -webkit-animation: fadeIn1 1.5s ease forwards;
+          animation: fadeIn1 1.5s ease forwards;
   opacity: 1;
 }
 @media screen and (max-width: 1199px) {
