@@ -200,6 +200,10 @@
 				width: 340px;
 			}
 
+			@include to(1300px) {
+				width: 19.5%;
+			}
+
 			@include to(tablet-h) {
 				width: 110px;
 				height: 621px;
@@ -227,6 +231,10 @@
 
 			@include to(1690px) {
 				width: 340px;
+			}
+
+			@include to(1300px) {
+				width: 20%;
 			}
 
 			@include to(tablet-h) {

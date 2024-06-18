@@ -568,6 +568,11 @@ video {
     width: 340px;
   }
 }
+@media screen and (max-width: 1299px) {
+  .portlet[data-portlet=zuma] .section1[data-section]:before {
+    width: 19.5%;
+  }
+}
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section]:before {
     width: 110px;
@@ -597,6 +602,11 @@ video {
 @media screen and (max-width: 1689px) {
   .portlet[data-portlet=zuma] .section1[data-section]:after {
     width: 340px;
+  }
+}
+@media screen and (max-width: 1299px) {
+  .portlet[data-portlet=zuma] .section1[data-section]:after {
+    width: 20%;
   }
 }
 @media screen and (max-width: 1199px) {
