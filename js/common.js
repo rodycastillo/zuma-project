@@ -122,21 +122,36 @@ document.addEventListener("DOMContentLoaded", function () {
   startAutoplay();
 
 
+  // const contenedor = document.querySelector('.section2__main__list');
+  // const elementos = Array.from(document.querySelectorAll('.section2__main__item'));
+  // let index = 0;
+
+  // const showNextGroup = () => {
+  //   contenedor.innerHTML = '';
+  //   [...Array(5)].forEach(() => {
+  //     contenedor.appendChild(elementos[index]);
+  //     index = (index + 1) % elementos.length;
+  //   });
+  // };
+
+
+  // showNextGroup();
+  // setInterval(showNextGroup, 3000);
   const contenedor = document.querySelector('.section2__main__list');
   const elementos = Array.from(document.querySelectorAll('.section2__main__item'));
   let index = 0;
-
   const showNextGroup = () => {
     contenedor.innerHTML = '';
-    [...Array(5)].forEach(() => {
-      contenedor.appendChild(elementos[index]);
-      index = (index + 1) % elementos.length;
+    [...Array(5)].forEach((_, i) => {
+      const currentIndex = (index + i) % elementos.length;
+      const elemento = elementos[currentIndex];
+      const nuevoElemento = elemento.cloneNode(true);
+      contenedor.appendChild(nuevoElemento);
     });
+    index = (index + 1) % elementos.length;
   };
-
   showNextGroup();
   setInterval(showNextGroup, 3000);
-
 
 
   // gsap.registerPlugin(ScrollTrigger);

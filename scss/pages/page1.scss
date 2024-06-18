@@ -903,7 +903,7 @@
 				// transition: transform .1s ease-in-out;
 
 				width: 20vw;
-				animation: fadeIn 1s ease forwards;
+				animation: fadeIn 1s ease forwards, left 0.5s ease;
 				opacity: .5;
 
 				@include to(tablet) {

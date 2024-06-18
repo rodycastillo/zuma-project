@@ -1269,8 +1269,8 @@ video {
           justify-content: center;
   gap: 7px;
   width: 20vw;
-  -webkit-animation: fadeIn 1s ease forwards;
-          animation: fadeIn 1s ease forwards;
+  -webkit-animation: fadeIn 1s ease forwards, left 0.5s ease;
+          animation: fadeIn 1s ease forwards, left 0.5s ease;
   opacity: 0.5;
 }
 @media screen and (max-width: 768px) {
