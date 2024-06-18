@@ -122,6 +122,22 @@ document.addEventListener("DOMContentLoaded", function () {
   startAutoplay();
 
 
+  const contenedor = document.querySelector('.section2__main__list');
+  const elementos = Array.from(document.querySelectorAll('.section2__main__item'));
+  let index = 0;
+
+  const showNextGroup = () => {
+    contenedor.innerHTML = '';
+    [...Array(5)].forEach(() => {
+      contenedor.appendChild(elementos[index]);
+      index = (index + 1) % elementos.length;
+    });
+  };
+
+  showNextGroup();
+  setInterval(showNextGroup, 3000);
+
+
 
   // gsap.registerPlugin(ScrollTrigger);
 
@@ -142,33 +158,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  $('.section2__main__list').slick({
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    speed: 300,
-    slidesToShow: 5,
-    centerMode: true,
-    initialState: 4,
-    // fade: true,
-    autoplay: true,
-    autoplaySpeed: 600,
-    cssEase: 'linear',
-    // variableWidth: true
-    // centerPadding: '60px',
-    // rtl: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          variableWidth: false,
-        }
-      }
-    ]
+  // $('.section2__main__list').slick({
+  //   dots: false,
+  //   arrows: false,
+  //   infinite: true,
+  //   autoplay: true,
+  //   speed: 300,
+  //   slidesToShow: 5,
+  //   centerMode: true,
+  //   initialState: 0,
+  //   autoplay: true,
+  //   autoplaySpeed: 600,
+  //   cssEase: 'linear',
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         variableWidth: false,
+  //       }
+  //     }
+  //   ]
 
-  })
+  // })
 
 
   // // Function to apply transformations
