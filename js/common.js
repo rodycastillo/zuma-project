@@ -22,6 +22,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // VIDEO
+  const unmuteButton = section__video.querySelector('.section3__main__video__icon');
+
+  const toggleMute = () => {
+    if (window.innerWidth >= 641) {
+      desktopVideo.removeAttribute('autoplay');
+      desktopVideo.controls = false;
+      if (desktopVideo.muted) {
+        desktopVideo.muted = false;
+      } else {
+        desktopVideo.muted = true;
+      }
+    } else {
+      mobileVideo.removeAttribute('autoplay');
+      mobileVideo.controls = false;
+      if (mobileVideo.muted) {
+        mobileVideo.muted = false;
+      } else {
+        mobileVideo.muted = true;
+      }
+    }
+  };
+
+  unmuteButton.addEventListener('click', toggleMute);
+
   const checkVideoVisibility = () => {
     const rect = section__video.getBoundingClientRect();
     const isAtTop = rect.top <= 60 && rect.bottom >= 220;
@@ -122,18 +146,34 @@ document.addEventListener("DOMContentLoaded", function () {
   startAutoplay();
 
 
+  // const contenedor = document.querySelector('.section2__main__list');
+  // const elementos = Array.from(document.querySelectorAll('.section2__main__item'));
+  // let index = 0;
+  // const showNextGroup = () => {
+  //   contenedor.innerHTML = '';
+  //   [...Array(5)].forEach((_, i) => {
+  //     const currentIndex = (index + i) % elementos.length;
+  //     const elemento = elementos[currentIndex];
+  //     const nuevoElemento = elemento.cloneNode(true);
+  //     contenedor.appendChild(nuevoElemento);
+  //   });
+  //   index = (index + 1) % elementos.length;
+  // };
+  // showNextGroup();
+  // setInterval(showNextGroup, 3000);
+
   const contenedor = document.querySelector('.section2__main__list');
   const elementos = Array.from(document.querySelectorAll('.section2__main__item'));
-  let index = 0;
+  let index = elementos.length - 1;
   const showNextGroup = () => {
     contenedor.innerHTML = '';
     [...Array(5)].forEach((_, i) => {
-      const currentIndex = (index + i) % elementos.length;
+      const currentIndex = (index - i + elementos.length) % elementos.length;
       const elemento = elementos[currentIndex];
       const nuevoElemento = elemento.cloneNode(true);
-      contenedor.appendChild(nuevoElemento);
+      contenedor.appendChild(elementos[currentIndex]);
     });
-    index = (index + 1) % elementos.length;
+    index = (index - 1 + elementos.length) % elementos.length;
   };
   showNextGroup();
   setInterval(showNextGroup, 3000);

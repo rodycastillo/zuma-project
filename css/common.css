@@ -882,7 +882,7 @@ video {
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v1 {
-  background-image: url("/assets/background/slides/fondo1.jpg");
+  background-image: url("/assets/background/slides/fondo1.webp");
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v1 {
@@ -895,7 +895,7 @@ video {
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v2 {
-  background-image: url("/assets/background/slides/fondo2.jpg");
+  background-image: url("/assets/background/slides/fondo2.webp");
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v2 {
@@ -908,7 +908,7 @@ video {
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v3 {
-  background-image: url("/assets/background/slides/fondo3.jpg");
+  background-image: url("/assets/background/slides/fondo3.webp");
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v3 {
@@ -921,7 +921,7 @@ video {
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v4 {
-  background-image: url("/assets/background/slides/fondo4.jpg");
+  background-image: url("/assets/background/slides/fondo4.webp");
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v4 {
@@ -934,7 +934,7 @@ video {
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v5 {
-  background-image: url("/assets/background/slides/fondo5.jpg");
+  background-image: url("/assets/background/slides/fondo5.webp");
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v5 {
@@ -947,7 +947,7 @@ video {
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v6 {
-  background-image: url("/assets/background/slides/fondo6.jpg");
+  background-image: url("/assets/background/slides/fondo6.webp");
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v6 {
@@ -1585,6 +1585,7 @@ video {
   max-width: 90%;
   border-radius: 20px;
   overflow: hidden;
+  position: relative;
 }
 @media screen and (max-width: 1199px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
@@ -1597,14 +1598,51 @@ video {
     height: 560px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
+    width: 638.317px;
+    height: 359.087px;
+  }
+}
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
     border-radius: 20px;
     margin-top: 30px;
     width: 285px;
-    max-height: 433px;
-    width: auto;
-    max-width: 285px;
+    height: 433px;
+  }
+}
+.portlet[data-portlet=zuma] .section3[data-section] .section3__main__video__icon {
+  position: absolute;
+  background-image: url("/assets/variants/icon__mute.png");
+  background-position: center;
+  background-size: contain;
+  width: 53px;
+  height: 53px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 37px;
+  display: block;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: all;
+  transition: all;
+}
+@media screen and (max-width: 1199px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video__icon {
+    width: 28.405px;
+    height: 28.405px;
+    bottom: 22px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video__icon {
+    width: 43px;
+    height: 43px;
+    bottom: 18px;
+    right: 14px;
+    margin: 0 0 0 auto;
   }
 }
 .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video video {
@@ -1657,7 +1695,7 @@ video {
 .portlet[data-portlet=zuma] .section4[data-section] {
   height: 466px;
   width: 100%;
-  background-image: url("/assets/background/sections/background4.png");
+  background-image: url("/assets/background/sections/background4.webp");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1737,7 +1775,7 @@ video {
   left: 0;
   right: 0;
   background-color: #006B1E;
-  background-image: url("/assets/background/sections/background5.png");
+  background-image: url("/assets/background/sections/background5.webp");
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;

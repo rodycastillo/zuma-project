@@ -497,7 +497,7 @@
 
 
 				&.v1 {
-					background-image: url('/assets/background/slides/fondo1.jpg');
+					background-image: url('/assets/background/slides/fondo1.webp');
 
 					@include to(tablet-h) {
 						background-image: url('/assets/background/slides/fondo1-T.jpg');
@@ -509,7 +509,7 @@
 				}
 
 				&.v2 {
-					background-image: url('/assets/background/slides/fondo2.jpg');
+					background-image: url('/assets/background/slides/fondo2.webp');
 
 					@include to(tablet-h) {
 						background-image: url('/assets/background/slides/fondo2-T.jpg');
@@ -523,7 +523,7 @@
 				}
 
 				&.v3 {
-					background-image: url('/assets/background/slides/fondo3.jpg');
+					background-image: url('/assets/background/slides/fondo3.webp');
 
 					@include to(tablet-h) {
 						background-image: url('/assets/background/slides/fondo3-T.jpg');
@@ -536,7 +536,7 @@
 				}
 
 				&.v4 {
-					background-image: url('/assets/background/slides/fondo4.jpg');
+					background-image: url('/assets/background/slides/fondo4.webp');
 
 					@include to(tablet-h) {
 						background-image: url('/assets/background/slides/fondo4-T.jpg');
@@ -548,7 +548,7 @@
 				}
 
 				&.v5 {
-					background-image: url('/assets/background/slides/fondo5.jpg');
+					background-image: url('/assets/background/slides/fondo5.webp');
 
 					@include to(tablet-h) {
 						background-image: url('/assets/background/slides/fondo5-T.jpg');
@@ -560,7 +560,7 @@
 				}
 
 				&.v6 {
-					background-image: url('/assets/background/slides/fondo6.jpg');
+					background-image: url('/assets/background/slides/fondo6.webp');
 
 					@include to(tablet-h) {
 						background-image: url('/assets/background/slides/fondo6-T.jpg');
@@ -1238,6 +1238,8 @@
 				border-radius: 20px;
 				overflow: hidden;
 
+				position: relative;
+
 				@include to(tablet-h) {
 					height: auto;
 				}
@@ -1247,14 +1249,54 @@
 					height: 560px;
 				}
 
+				@include to(tablet-h) {
+					width: 638.317px;
+					height: 359.087px;
+				}
+
 				@include to(movil-h) {
 					border-radius: 20px;
 
 					margin-top: 30px;
 					width: 285px;
-					max-height: 433px;
-					width: auto;
-					max-width: 285px;
+					height: 433px;
+					// height: 100%;
+					// width: auto;
+					// max-width: 285px;
+				}
+
+				&__icon {
+					position: absolute;
+					// content: '';
+					background-image: url('/assets/variants/icon__mute.png');
+					background-position: center;
+					background-size: contain;
+					width: 53px;
+					height: 53px;
+					margin: 0 auto;
+					left: 0;
+					right: 0;
+					bottom: 37px;
+					display: block;
+					cursor: pointer;
+					z-index: 100;
+					transition: all;
+
+
+					@include to(tablet-h) {
+						width: 28.405px;
+						height: 28.405px;
+						bottom: 22px;
+					}
+
+					@include to(movil-h) {
+						width: 43px;
+						height: 43px;
+						bottom: 18px;
+						right: 14px;
+						margin: 0 0 0 auto;
+					}
+
 				}
 
 				video {
@@ -1309,7 +1351,7 @@
 		height: 466px;
 		width: 100%;
 
-		background-image: url('/assets/background/sections/background4.png');
+		background-image: url('/assets/background/sections/background4.webp');
 		background-position: top center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -1383,7 +1425,7 @@
 			left: 0;
 			right: 0;
 			background-color: #006B1E;
-			background-image: url('/assets/background/sections/background5.png');
+			background-image: url('/assets/background/sections/background5.webp');
 			background-position: bottom center;
 			background-repeat: no-repeat;
 			background-size: cover;
