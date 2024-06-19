@@ -1319,12 +1319,12 @@
 
 					@include to(tablet-h) {
 						font-size: 30px;
-						line-height: 30px;
+						line-height: 40px;
 					}
 
 					@include to(tablet) {
 						font-size: 20px;
-						line-height: 50px;
+						line-height: 30px;
 					}
 				}
 
