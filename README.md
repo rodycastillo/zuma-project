@@ -1,21 +1,34 @@
 # Zuma Project - NERD
 
-Stack:
+- Zuma | 100% natural juices
+
+## Stack:
 
 - Pug
 - SCSS
 - VanillaJS
 
-Animations:
+## Animations:
 
 - Keyframes
 - [AOS](https://michalsnik.github.io/aos/)
 
-Resources:
+## Resources:
 
-- [FIGMA](https://www.figma.com/design/QoBY4UicY3jQCa74IVBctC/Bench-Zuma?t=B1jCC2qWqeoARtje-0)
+- [Figma](https://www.figma.com/design/QoBY4UicY3jQCa74IVBctC/Bench-Zuma?t=B1jCC2qWqeoARtje-0)
 - [Prepros](https://prepros.io/)
 
-Example preview:
+## Run project:
 
-<!-- ![Preview]('') -->
+1. Clone the repository:
+
+```bash
+ git clone https://github.com/rodycastillo/zuma-project.git
+```
+
+2. Drag and drop the project into Prepros inteface.
+3. Click on the open preview option.
+
+## Example preview:
+
+![Preview](https://github.com/rodycastillo/zuma-project/blob/main/assets/readme/desktop.png)
