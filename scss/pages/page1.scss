@@ -1174,6 +1174,12 @@
 					top: 15%;
 				}
 
+				@include to(1690px) {
+					max-width: 260px;
+					height: 80%;
+					top: 20%;
+				}
+
 				@include to(1400px) {
 					max-width: 14%;
 					left: -30px;
@@ -1229,6 +1235,12 @@
 					width: 418px;
 					max-width: 18%;
 					top: 15%;
+				}
+
+				@include to(1690px) {
+					max-width: 260px;
+					height: 80%;
+					top: 20%;
 				}
 
 				@include to(1400px) {
@@ -1313,7 +1325,7 @@
 				height: 670px;
 				margin: 64px auto 0;
 
-				max-width: 90%;
+				max-width: 80%;
 
 				border-radius: 20px;
 				overflow: hidden;

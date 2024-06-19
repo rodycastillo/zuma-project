@@ -1595,6 +1595,13 @@ video {
     top: 15%;
   }
 }
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
+    max-width: 260px;
+    height: 80%;
+    top: 20%;
+  }
+}
 @media screen and (max-width: 1399px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
     max-width: 14%;
@@ -1647,6 +1654,13 @@ video {
     width: 418px;
     max-width: 18%;
     top: 15%;
+  }
+}
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {
+    max-width: 260px;
+    height: 80%;
+    top: 20%;
   }
 }
 @media screen and (max-width: 1399px) {
@@ -1728,7 +1742,7 @@ video {
   width: 1191px;
   height: 670px;
   margin: 64px auto 0;
-  max-width: 90%;
+  max-width: 80%;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
