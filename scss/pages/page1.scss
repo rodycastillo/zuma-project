@@ -313,6 +313,10 @@
 				top: 19%;
 				// }
 
+				@include to(1910px) {
+					top: 15%;
+				}
+
 				@include to(tablet-h) {
 					width: 130px;
 					height: 120px;
@@ -405,7 +409,7 @@
 					// background-color: #004513;
 					width: 50px;
 					height: 50px;
-					top: 49%;
+					top: 43%;
 					background-image: url('/assets/variants/arrow__left.png');
 					background-position: center;
 					background-size: contain;
@@ -414,6 +418,10 @@
 					margin: 0 auto;
 					cursor: pointer;
 					transform: translateX(-330px);
+
+					@include to(1690px) {
+						top: 45%;
+					}
 
 					@include to(tablet-h) {
 						transform: translateX(-280px);
@@ -436,7 +444,7 @@
 					// background-color: #004513;
 					width: 50px;
 					height: 50px;
-					top: 49%;
+					top: 43%;
 					background-image: url('/assets/variants/arrow__right.png');
 					background-position: center;
 					background-size: contain;
@@ -445,6 +453,10 @@
 					margin: 0 auto;
 					cursor: pointer;
 					transform: translateX(370px);
+
+					@include to(1690px) {
+						top: 45%;
+					}
 
 					@include to(tablet-h) {
 						transform: translateX(300px);
@@ -529,7 +541,7 @@
 				width: 100vw;
 				height: inherit;
 
-				background-position: center;
+				background-position: top center;
 				background-size: cover;
 				background-repeat: no-repeat;
 
@@ -537,7 +549,7 @@
 				justify-content: center;
 				flex-direction: row;
 				align-items: flex-start;
-				padding-top: 330px;
+				padding-top: 370px;
 
 				opacity: 0;
 				position: absolute;
@@ -555,8 +567,9 @@
 					z-index: 2;
 				}
 
-				@include to(laptop) {
+				@include to(1600px) {
 					// padding-top: 2%;
+					padding-top: 320px;
 				}
 
 				@include to(tablet-h) {

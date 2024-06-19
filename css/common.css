@@ -682,6 +682,11 @@ video {
   height: 140px;
   top: 19%;
 }
+@media screen and (max-width: 1909px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main__logo {
+    top: 15%;
+  }
+}
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main__logo {
     width: 130px;
@@ -785,7 +790,7 @@ video {
   z-index: 5;
   width: 50px;
   height: 50px;
-  top: 49%;
+  top: 43%;
   background-image: url("/assets/variants/arrow__left.png");
   background-position: center;
   background-size: contain;
@@ -795,6 +800,11 @@ video {
   cursor: pointer;
   -webkit-transform: translateX(-330px);
           transform: translateX(-330px);
+}
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left {
+    top: 45%;
+  }
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__left {
@@ -821,7 +831,7 @@ video {
   z-index: 5;
   width: 50px;
   height: 50px;
-  top: 49%;
+  top: 43%;
   background-image: url("/assets/variants/arrow__right.png");
   background-position: center;
   background-size: contain;
@@ -831,6 +841,11 @@ video {
   cursor: pointer;
   -webkit-transform: translateX(370px);
           transform: translateX(370px);
+}
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right {
+    top: 45%;
+  }
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main .arrow__right {
@@ -933,7 +948,7 @@ video {
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
   width: 100vw;
   height: inherit;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -949,7 +964,7 @@ video {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-top: 330px;
+  padding-top: 370px;
   opacity: 0;
   position: absolute;
   z-index: 1;
@@ -963,6 +978,11 @@ video {
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.active {
   opacity: 1;
   z-index: 2;
+}
+@media screen and (max-width: 1599px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
+    padding-top: 320px;
+  }
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
