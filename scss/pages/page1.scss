@@ -1191,11 +1191,18 @@
 
 				@include to(movil-h) {
 					background-image: url('/assets/variants/resource3__left-M.png');
-					width: 90px;
-					height: 407px;
+					// width: 90px;
+					// height: 407px;
+					// top: auto;
+					// left: -9.7%;
+					// bottom: 3%;
+
+					width: 120px;
+					height: 420px;
 					top: auto;
-					left: -9.7%;
-					bottom: 3%;
+					left: -10%;
+					bottom: 7%;
+					max-width: 20%;
 					// left: -50%;
 				}
 			}
@@ -1235,11 +1242,17 @@
 
 				@include to(movil-h) {
 					background-image: url('/assets/variants/resource3__right-M.png');
-					width: 90px;
-					height: 407px;
+					// width: 90px;
+					// height: 407px;
+					// top: auto;
+					// right: -9.7%;
+					// bottom: 3%;
+					width: 120px;
+					height: 420px;
 					top: auto;
-					right: -9.7%;
-					bottom: 3%;
+					right: -10%;
+					bottom: 7%;
+					max-width: 20%;
 				}
 			}
 

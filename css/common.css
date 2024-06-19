@@ -1614,11 +1614,12 @@ video {
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
     background-image: url("/assets/variants/resource3__left-M.png");
-    width: 90px;
-    height: 407px;
+    width: 120px;
+    height: 420px;
     top: auto;
-    left: -9.7%;
-    bottom: 3%;
+    left: -10%;
+    bottom: 7%;
+    max-width: 20%;
   }
 }
 .portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {
@@ -1660,11 +1661,12 @@ video {
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {
     background-image: url("/assets/variants/resource3__right-M.png");
-    width: 90px;
-    height: 407px;
+    width: 120px;
+    height: 420px;
     top: auto;
-    right: -9.7%;
-    bottom: 3%;
+    right: -10%;
+    bottom: 7%;
+    max-width: 20%;
   }
 }
 .portlet[data-portlet=zuma] .section3[data-section] .section3__main hgroup h2 {
