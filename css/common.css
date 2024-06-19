@@ -1595,6 +1595,13 @@ video {
     top: 15%;
   }
 }
+@media screen and (max-width: 1399px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
+    max-width: 14%;
+    left: -30px;
+    top: 30%;
+  }
+}
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
     background-image: url("/assets/variants/resource3__left-T.png");
@@ -1640,6 +1647,13 @@ video {
     width: 418px;
     max-width: 18%;
     top: 15%;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {
+    max-width: 15%;
+    right: -30px;
+    top: 30%;
   }
 }
 @media screen and (max-width: 1294px) {
@@ -1718,6 +1732,11 @@ video {
   border-radius: 20px;
   overflow: hidden;
   position: relative;
+}
+@media screen and (max-width: 1399px) {
+  .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
+    max-width: 80%;
+  }
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {

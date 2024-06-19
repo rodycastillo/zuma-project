@@ -1174,6 +1174,12 @@
 					top: 15%;
 				}
 
+				@include to(1400px) {
+					max-width: 14%;
+					left: -30px;
+					top: 30%;
+				}
+
 				@include to(tablet-h) {
 					background-image: url('/assets/variants/resource3__left-T.png');
 					width: 205px;
@@ -1223,6 +1229,12 @@
 					width: 418px;
 					max-width: 18%;
 					top: 15%;
+				}
+
+				@include to(1400px) {
+					max-width: 15%;
+					right: -30px;
+					top: 30%;
 				}
 
 				@include to(tablet-h) {
@@ -1307,6 +1319,10 @@
 				overflow: hidden;
 
 				position: relative;
+
+				@include to(1400px) {
+					max-width: 80%;
+				}
 
 				@include to(tablet-h) {
 					height: auto;
