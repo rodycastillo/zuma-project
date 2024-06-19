@@ -180,43 +180,52 @@
 		}
 
 		&:before {
-			width: 363px;
 			height: 100%;
-			max-height: 1170px;
+			width: 100%;
+			max-width: 300px;
+			max-height: 1000px;
 			flex-shrink: 0;
 			position: absolute;
 			z-index: 3;
 			content: '';
 			left: 0;
 			top: 0;
+			z-index: 3;
 			background-image: url('/assets/variants/resource1__left.png');
 			background-repeat: no-repeat;
 			background-position: top right;
 			background-size: cover;
-
 			animation: bounceInLeft .5s ease-in;
 
-			@include to(1690px) {
+			@include to(widescreen) {
+				max-width: 15%;
 				width: 340px;
 			}
 
-			@include to(1300px) {
-				width: 19.5%;
+			@include to(laptop) {
+				max-width: 20%;
 			}
 
 			@include to(tablet-h) {
-				width: 110px;
-				height: 621px;
+				max-width: 205px;
+				width: 16%;
+				height: 100%;
 				background-size: contain;
+				background-image: url('/assets/variants/resource1__left-T.png');
+			}
+
+			@include to(movil) {
 				background-image: url('/assets/variants/resource1__left-M.png');
+				width: 28%;
 			}
 		}
 
 
 		&:after {
-			width: 383px;
 			height: 100%;
-			max-height: 1170px;
+			max-height: 1000px;
+			width: 100%;
+			max-width: 300px;
 			flex-shrink: 0;
 			position: absolute;
 			z-index: 3;
@@ -229,19 +238,22 @@
 			background-size: cover;
 			animation: bounceInRight .5s ease-in;
 
-			@include to(1690px) {
+			@include to(widescreen) {
+				max-width: 15%;
 				width: 340px;
 			}
 
-			@include to(1300px) {
-				width: 20%;
+			@include to(tablet-h) {
+				max-width: 205px;
+				width: 16%;
+				height: 100%;
+				background-size: contain;
+				background-image: url('/assets/variants/resource1__right-t.png');
 			}
 
-			@include to(tablet-h) {
-				width: 110px;
-				height: 621px;
-				background-size: contain;
+			@include to(movil) {
 				background-image: url('/assets/variants/resource1__right-M.png');
+				width: 28%;
 			}
 		}
 
@@ -253,10 +265,10 @@
 			position: relative;
 
 			&::after {
-				// position: absolute;
-				// content: '';
+				position: absolute;
+				content: '';
 				width: 100%;
-				height: 38%;
+				height: 30%;
 				bottom: 0;
 				left: 0;
 				right: 0;
@@ -266,8 +278,19 @@
 				background-position: top center;
 				background-size: cover;
 
+				@include to(tablet-h) {
+					height: 27%;
+				}
+
 				@include to(tablet) {
-					height: 33%;
+					// height: 25%;
+					background-position: left;
+				}
+
+				@include to(movil-h) {
+					// height: 25%;
+					background-position: center top;
+					height: 22%;
 				}
 
 			}
@@ -280,8 +303,25 @@
 				z-index: 4;
 				margin: 0 auto;
 
+				// img {
+				width: 147.285px;
+				height: 140px;
+				top: 19%;
+				// }
+
+				@include to(tablet-h) {
+					width: 130px;
+					height: 120px;
+					top: 18%;
+				}
+
 				@include to(tablet) {
-					display: none;
+					width: 79.956px;
+					height: 76px;
+				}
+
+				@include to(movil) {
+					top: 20%;
 				}
 			}
 
@@ -361,7 +401,7 @@
 					// background-color: #004513;
 					width: 50px;
 					height: 50px;
-					top: 47%;
+					top: 49%;
 					background-image: url('/assets/variants/arrow__left.png');
 					background-position: center;
 					background-size: contain;
@@ -371,11 +411,18 @@
 					cursor: pointer;
 					transform: translateX(-330px);
 
+					@include to(tablet-h) {
+						transform: translateX(-280px);
+						top: 48%;
+					}
+
 					@include to(tablet) {
-						transform: translateX(-105px);
-						// width: 45px;
-						// height: 45px;
-						top: 42%;
+						transform: translateX(-100px);
+					}
+
+					@include to(movil) {
+						transform: translateX(-80px);
+						top: 45%;
 					}
 				}
 
@@ -385,7 +432,7 @@
 					// background-color: #004513;
 					width: 50px;
 					height: 50px;
-					top: 47%;
+					top: 49%;
 					background-image: url('/assets/variants/arrow__right.png');
 					background-position: center;
 					background-size: contain;
@@ -393,17 +440,25 @@
 					right: 0;
 					margin: 0 auto;
 					cursor: pointer;
-					transform: translateX(350px);
+					transform: translateX(370px);
+
+					@include to(tablet-h) {
+						transform: translateX(300px);
+						top: 48%;
+					}
 
 					@include to(tablet) {
-						transform: translateX(105px);
-						// width: 45px;
-						// height: 45px;
-						top: 42%;
+						transform: translateX(100px);
+					}
+
+					@include to(movil) {
+						transform: translateX(80px);
+						top: 45%;
 					}
 				}
 
 				&__down {
+					display: none;
 					position: absolute;
 					z-index: 5;
 					bottom: 30%;
@@ -438,28 +493,28 @@
 
 		.section1__slider {
 			width: 100%;
-			height: inherit;
-			// background-color: red;
 			position: relative;
-			// z-index: 10;
-
-
 			display: flex;
-			width: fit-content;
+			// width: fit-content;
+			height: 1000px;
 
-			height: 1150px;
-			// overflow: scroll;
-			// transition: transform 1s ease;
-
-
-			@include to(tablet-w) {
-				height: 750px;
+			@include to(tablet-h) {
+				height: 800px;
 			}
 
 			@include to(tablet) {
 				height: 700px;
 			}
 
+			@keyframes fadeIn {
+				0% {
+					opacity: .5;
+				}
+
+				100% {
+					opacity: 1;
+				}
+			}
 
 
 			&__item {
@@ -473,24 +528,47 @@
 				display: flex;
 				justify-content: center;
 				flex-direction: row;
-				align-items: center;
+				align-items: flex-start;
+				padding-top: 330px;
+
+				opacity: 0;
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+
+				transition: opacity .7s ease-in-out;
+
+
+				&.active {
+					opacity: 1;
+				}
 
 				@include to(laptop) {
-					padding-top: 2%;
+					// padding-top: 2%;
 				}
 
 				@include to(tablet-h) {
-					// align-items: flex-start;
-					padding-top: 3%;
+					padding-top: 250px;
 				}
 
 				@include to(tablet) {
 					align-items: flex-start;
-					padding-top: 4%;
+					// padding-top: 4%;
+					padding-top: 240px;
 				}
 
 				@include to(movil-h) {
-					padding-top: 7.5%;
+					// padding-top: 7.5%;
+					align-items: flex-start;
+					// padding-top: 80px;
+					// height: fit-content;
+				}
+
+				@include to(movil) {
+					padding-top: 230px;
 				}
 
 
@@ -587,16 +665,25 @@
 
 					&__img {
 						// width: 217.27px;
-						height: 350px;
+						height: 400px;
+						width: auto;
 						transform: rotate(15.284deg);
 						flex-shrink: 0;
 
 						@include to(tablet-h) {
-							max-height: 38vh;
+							height: 350px;
 						}
 
 						@include to(tablet) {
-							height: 270px;
+							height: 220px;
+						}
+
+						@include to(movil-h) {
+							height: 170px;
+						}
+
+						@include to(movil) {
+							height: 190px;
 						}
 					}
 
@@ -619,9 +706,17 @@
 								font-size: 22px;
 								line-height: 33px;
 							}
+
+							@include to(movil) {
+								text-align: center;
+							}
 						}
 
 						p {
+							@include to(movil) {
+								text-align: center;
+							}
+
 							span {
 								font: normal 700 20px $font2;
 								line-height: 25px;
@@ -629,6 +724,10 @@
 								@include to(tablet) {
 									font-size: 10.622px;
 									line-height: 13px;
+								}
+
+								@include to(movil) {
+									text-align: center;
 								}
 
 								&.c {
@@ -650,12 +749,10 @@
 							}
 
 							&.v3 {
-
 								color: #E0FFD8;
 							}
 
 							&.v4 {
-								color: #E0FFD8;
 								color: #FFD1FD;
 							}
 
@@ -729,20 +826,6 @@
 		position: relative;
 		top: -1px;
 
-
-
-		@include to(tablet-h) {
-			// height: 480px;
-		}
-
-		@include to(tablet-h) {
-			// height: 420px;
-		}
-
-		@include to(movil-h) {
-			// height: 260px;
-		}
-
 		.brands {
 			position: absolute;
 			top: 20px;
@@ -764,9 +847,16 @@
 			}
 
 			@include to(tablet) {
-				width: 276.895px;
-				height: 36px;
+				width: 406.895px;
+				height: 56px;
 				// top: 8%;
+			}
+
+			@include to(movil-h) {
+				width: 295px;
+				max-width: 90%;
+				margin-top: 0px;
+				height: 40px;
 			}
 
 			img {
@@ -784,11 +874,11 @@
 			padding: 200px 0 30px;
 
 			@include to(tablet-h) {
-				padding-top: 120px;
+				padding-top: 150px;
 			}
 
 			@include to(movil-h) {
-				padding-top: 65px;
+				padding-top: 100px;
 				padding-bottom: 0;
 				min-height: auto;
 			}
@@ -801,9 +891,14 @@
 					text-align: center;
 					text-transform: uppercase;
 
-					@include to(tablet) {
+					@include to(tablet-h) {
+						font-size: 30px;
+						line-height: 35px;
+					}
+
+					@include to(movil-h) {
 						font-size: 20px;
-						line-height: 50px;
+						line-height: 35px;
 					}
 				}
 			}
@@ -811,21 +906,15 @@
 			&__list {
 				display: flex;
 				justify-content: center;
-				margin-top: 120px;
-				// gap: 120px;
-				flex-wrap: wrap;
-				// transition: transform .5s ease-in-out;
 
-				// height: 200px;
+				flex-wrap: wrap;
 				width: 100%;
 				display: flex;
-				// gap: 5vw;
 				flex-wrap: nowrap;
-
-				width: fit-content;
-
+				width: 100%;
+				max-width: 1920px;
+				margin: 120px auto 0;
 				height: 320px;
-
 
 				@include to(laptop) {
 					gap: 0;
@@ -834,20 +923,19 @@
 
 				@include to(tablet-h) {
 					height: 190px;
-					margin-top: 80px;
+					margin-top: 50px;
+					max-width: 90%;
 				}
 
 				@include to(tablet) {
-					justify-content: space-between;
 					width: 100%;
-					padding: 0 5px;
 					flex-wrap: nowrap;
-					height: 120px;
+					height: 150px;
 				}
 
 				@include to(movil-h) {
 					height: 120px;
-					margin-top: 30px;
+					margin-top: 50px;
 				}
 			}
 
@@ -873,24 +961,19 @@
 
 
 
+
 			&__item {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: flex-start;
 				gap: 7px;
-				// transition: transform .1s ease-in-out;
-
 				width: 20vw;
 				animation: fadeIn 1s ease forwards, left 0.5s ease;
 				opacity: .5;
-				width: calc(100vw / 7);
+				width: 20%;
 
 				height: fit-content;
-
-				@include to(tablet-h) {
-					width: 20vw;
-				}
 
 				img {
 					height: auto;
@@ -932,96 +1015,72 @@
 					}
 				}
 
-				&:nth-child(1) {
-					transform: translateY(220px);
+				&:nth-child(1),
+				&:nth-child(5) {
+					transform: translateY(170px);
 
 					@include to(tablet-h) {
-						transform: translateY(90px);
-					}
-
-					@include to(movil-h) {
-						transform: translateY(40px);
-					}
-
-				}
-
-				&:nth-child(7) {
-					transform: translateY(220px);
-
-					@include to(tablet-h) {
-						transform: translateY(90px);
-					}
-
-					@include to(movil-h) {
-						transform: translateY(60px);
-					}
-
-				}
-
-				&:nth-child(2) {
-
-					transform: translateY(120px);
-
-					@include to(tablet-h) {
-						transform: translateY(40px);
-					}
-
-					@include to(movil-h) {
-						transform: translateY(0px);
-					}
-				}
-
-				&:nth-child(6) {
-
-					transform: translateY(120px);
-
-					@include to(tablet-h) {
-						transform: translateY(40px);
+						transform: translateY(50px);
 					}
 
 					@include to(movil-h) {
 						transform: translateY(20px);
 					}
+
 				}
 
-				&:nth-child(3) {
+				&:nth-child(2),
+				&:nth-child(4) {
 					transform: translateY(60px);
 
 					@include to(tablet-h) {
-						animation: fadeIn1 1.5s ease forwards;
-						opacity: 1;
-						transform: scale(1.4) translateY(-10px);
+						transform: translateY(10px);
+					}
+
+					@include to(movil-h) {
+						transform: translateY(5px);
 					}
 				}
 
-				&:nth-child(4) {
+				&:nth-child(3) {
 					// transform: translateY(40px);
 					transform: scale(1.4);
 					animation: fadeIn1 1.5s ease forwards;
 					opacity: 1;
 
 					@include to(tablet-h) {
-						animation-name: none;
-						opacity: .5;
-						transform: translateY(40px);
+						transform: scale(1.4) translateY(-10px);
 					}
 
 					@include to(movil-h) {
-						transform: translateY(0px);
+						transform: scale(1.4) translateY(-10px);
 					}
 				}
 
-				&:nth-child(5) {
-					transform: translateY(60px);
+				// &:nth-child(4) {
+				// 	transform: translateY(60px);
 
-					@include to(tablet-h) {
-						transform: translateY(90px);
-					}
+				// 	@include to(tablet-h) {
+				// 		transform: translateY(90px);
+				// 	}
 
-					@include to(movil-h) {
-						transform: translateY(40px);
-					}
-				}
+				// 	@include to(movil-h) {
+				// 		transform: translateY(40px);
+				// 	}
+				// }
+
+				// &:nth-child(5) {
+
+				// 	transform: translateY(170px);
+
+				// 	@include to(tablet-h) {
+				// 		transform: translateY(40px);
+				// 	}
+
+				// 	@include to(movil-h) {
+				// 		transform: translateY(0px);
+				// 	}
+				// }
 			}
 		}
 
@@ -1038,6 +1097,14 @@
 		top: -2px;
 
 		background: #006B1D;
+
+		@include to(tablet-h) {
+			padding-top: 1rem;
+		}
+
+		@include to(movil-h) {
+			padding: 2rem;
+		}
 
 
 		&:after {
@@ -1057,6 +1124,7 @@
 
 			@include to(movil-h) {
 				top: -3%;
+				background-image: url('/assets/background/sections/background3-M.png');
 			}
 		}
 
@@ -1085,15 +1153,15 @@
 			width: 100%;
 			z-index: 2;
 			position: relative;
-			overflow: hidden;
+			// overflow: hidden;
 
 			&:before {
 				position: absolute;
 				content: '';
-				width: 418px;
+				width: 350px;
 				height: 100%;
 
-				top: 6%;
+				top: 4%;
 				left: 0;
 				z-index: 1;
 				background-image: url('/assets/variants/resource3__left.png');
@@ -1101,31 +1169,33 @@
 				background-position: top;
 				background-size: 100%;
 
-				@include to(1690px) {
-					height: 90%;
-					width: 380px;
-					top: 10%;
-				}
-
-				@include to(1290px) {
-					left: -140px;
+				@include to(widescreen) {
+					width: 418px;
+					max-width: 18%;
+					top: 15%;
 				}
 
 				@include to(tablet-h) {
-					width: 250px;
+					background-image: url('/assets/variants/resource3__left-T.png');
+					width: 205px;
+					max-width: 18%;
 					top: auto;
-					bottom: 1%;
-					height: 600px;
-					left: -100px;
+					height: 95%;
+					bottom: -7%;
+				}
+
+				@include to(tablet) {
+					bottom: -32%;
+					max-width: 16%;
 				}
 
 				@include to(movil-h) {
 					background-image: url('/assets/variants/resource3__left-M.png');
-					width: 120px;
-					height: 506px;
+					width: 90px;
+					height: 407px;
 					top: auto;
-					left: 0;
-					bottom: 2%;
+					left: -9.7%;
+					bottom: 3%;
 					// left: -50%;
 				}
 			}
@@ -1133,10 +1203,9 @@
 			&:after {
 				position: absolute;
 				content: '';
-				width: 455px;
+				width: 350px;
 				height: 100%;
-
-				top: 4%;
+				top: 6%;
 				right: 0;
 				z-index: 1;
 				background-image: url('/assets/variants/resource3__right.png');
@@ -1144,31 +1213,32 @@
 				background-position: top;
 				background-size: 100%;
 
-				@include to(1690px) {
-					height: 90%;
-					width: 380px;
-					top: 10%;
-				}
-
-				@include to(1290px) {
-					right: -140px;
+				@include to(widescreen) {
+					width: 418px;
+					max-width: 18%;
+					top: 15%;
 				}
 
 				@include to(tablet-h) {
-					width: 250px;
+					background-image: url('/assets/variants/resource3__right-T.png');
+					width: 205px;
+					max-width: 18%;
 					top: auto;
-					bottom: 1%;
-					right: -100px;
-					height: 600px;
+					height: 95%;
+					bottom: -4%;
+				}
+
+				@include to(tablet) {
+					bottom: -32%;
+					max-width: 16.5%;
 				}
 
 				@include to(movil-h) {
 					background-image: url('/assets/variants/resource3__right-M.png');
-					width: 98px;
-					height: 538px;
-					// right: -50%;
+					width: 90px;
+					height: 407px;
 					top: auto;
-					right: 0;
+					right: -9.7%;
 					bottom: 3%;
 				}
 			}
@@ -1179,6 +1249,11 @@
 					line-height: 50px;
 					color: #fff;
 					text-align: center;
+
+					@include to(tablet-h) {
+						font-size: 30px;
+						line-height: 30px;
+					}
 
 					@include to(tablet) {
 						font-size: 20px;
@@ -1195,7 +1270,8 @@
 					margin: 49px auto 0;
 
 					@include to(tablet-h) {
-						max-width: 90%;
+						max-width: 584px;
+						margin-top: 47px;
 					}
 
 					@include to(movil-h) {
@@ -1236,13 +1312,11 @@
 
 				@include to(movil-h) {
 					border-radius: 20px;
+					max-width: 100%;
 
 					margin-top: 30px;
 					width: 285px;
 					height: 433px;
-					// height: 100%;
-					// width: auto;
-					// max-width: 285px;
 				}
 
 				&__icon {
@@ -1261,6 +1335,10 @@
 					cursor: pointer;
 					z-index: 100;
 					transition: all;
+
+					&.active {
+						background-image: url('/assets/variants/icon__audio.png');
+					}
 
 
 					@include to(tablet-h) {
@@ -1310,10 +1388,15 @@
 				height: 66.471px;
 				margin: 64px auto 0;
 
-				@include to(movil-h) {
-					width: 340px;
+				@include to(tablet-h) {
+					width: 447.277px;
 					height: 45px;
-					max-width: 95%;
+				}
+
+				@include to(movil-h) {
+					width: 310.613px;
+					height: 36.034px;
+					max-width: 90%;
 					margin-top: 30px;
 				}
 
@@ -1335,6 +1418,10 @@
 		background-position: top center;
 		background-repeat: no-repeat;
 		background-size: cover;
+
+		@include to(tablet-h) {
+			height: 350px;
+		}
 
 
 		@include to(movil-h) {
@@ -1373,8 +1460,8 @@
 					text-transform: uppercase;
 
 					@include to(tablet-h) {
-						font-size: 34px;
-						line-height: 42px;
+						font-size: 30px;
+						line-height: 33px;
 					}
 
 					@include to(movil-h) {
@@ -1428,6 +1515,10 @@
 			position: relative;
 			z-index: 2;
 
+			@include to(tablet-h) {
+				padding: 40px 0 180px;
+			}
+
 			@include to(movil-h) {
 				padding-bottom: 151px;
 			}
@@ -1451,6 +1542,30 @@
 					width: 127px;
 					height: 127px;
 					border-radius: 100%;
+					display: block;
+
+					cursor: pointer;
+
+					transition: all 0.3s ease;
+					// opacity: 1;
+					// filter: grayscale(0px);
+					cursor: pointer;
+
+					&:hover {
+						// opacity: .7;
+						transition: all 0.3s ease;
+						transform: translateY(-3px);
+						// filter: grayscale(0px);
+
+						@include to(movil-h) {
+							transform: none;
+						}
+					}
+
+					@include to(tablet-h) {
+						width: 68px;
+						height: 68px;
+					}
 
 					@include to(movil-h) {
 						width: 56px;
@@ -1461,6 +1576,11 @@
 					&.c {
 						width: 142px;
 						height: 142px;
+
+						@include to(tablet-h) {
+							width: 78px;
+							height: 78px;
+						}
 
 						@include to(movil-h) {
 							width: 65px;
@@ -1487,6 +1607,10 @@
 				flex-direction: column;
 				margin-top: 110px;
 				gap: 40px;
+
+				@include to(tablet-h) {
+					margin-top: 45px;
+				}
 
 				@include to(movil-h) {
 					margin-top: 57px;
@@ -1543,7 +1667,7 @@
 						}
 					}
 
-					@include to(movil-h) {
+					@include to(tablet-h) {
 						width: 49px;
 						height: 49px;
 
@@ -1557,7 +1681,7 @@
 							width: 36.615px;
 							height: 36.615px;
 
-							@include to(movil-h) {
+							@include to(tablet-h) {
 								width: 26.385px;
 								height: 26.385px;
 							}
@@ -1569,7 +1693,7 @@
 							width: 40.779px;
 							height: 40.779px;
 
-							@include to(movil-h) {
+							@include to(tablet-h) {
 								width: 29.385px;
 								height: 29.385px;
 							}
@@ -1581,7 +1705,7 @@
 							width: 28.161px;
 							height: 28.161px;
 
-							@include to(movil-h) {
+							@include to(tablet-h) {
 								width: 20.293px;
 								height: 20.293px;
 							}
