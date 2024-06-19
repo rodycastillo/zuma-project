@@ -118,17 +118,17 @@ document.addEventListener("DOMContentLoaded", function () {
   nextButton.addEventListener('click', () => {
     stopAutoplay();
     nextSlide();
-    startAutoplay();
+    // startAutoplay();
   });
 
   prevButton.addEventListener('click', () => {
     stopAutoplay();
     prevSlide();
-    startAutoplay();
+    // startAutoplay();
   });
 
   updateSlidePosition();
-  startAutoplay();
+  // startAutoplay();
 
 
   const contenedor = document.querySelector('.section2__main__list');
@@ -138,7 +138,8 @@ document.addEventListener("DOMContentLoaded", function () {
     contenedor.innerHTML = '';
     [...Array(5)].forEach((_, i) => {
       const currentIndex = (index - i + elementos.length) % elementos.length;
-      contenedor.appendChild(elementos[currentIndex]);
+      contenedor.insertAdjacentElement('afterbegin', elementos[currentIndex])
+      // contenedor.appendChild(elementos[currentIndex]);
     });
     index = (index - 1 + elementos.length) % elementos.length;
   };

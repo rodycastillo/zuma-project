@@ -267,23 +267,28 @@
 				position: absolute;
 				content: '';
 				width: 100%;
-				height: 30%;
-				bottom: 0;
+				height: 480px;
+				// max-width: 400px;
+				bottom: -2px;
 				left: 0;
 				right: 0;
-				z-index: 1;
+				z-index: 2;
 				background-image: url('/assets/background/sections/background1__bottom.png');
 
 				background-position: top center;
 				background-size: cover;
 
+				@include to(1690px) {
+					height: 420px;
+				}
+
 				@include to(tablet-h) {
-					height: 27%;
+					height: 32%;
 				}
 
 				@include to(tablet) {
-					// height: 25%;
-					background-position: left;
+					height: 23%;
+					// background-position: left;
 				}
 
 				@include to(movil-h) {
@@ -495,7 +500,11 @@
 			position: relative;
 			display: flex;
 			// width: fit-content;
-			height: 1000px;
+			height: 1250px;
+
+			@include to(1690px) {
+				height: 1100px;
+			}
 
 			@include to(tablet-h) {
 				height: 800px;
@@ -543,6 +552,7 @@
 
 				&.active {
 					opacity: 1;
+					z-index: 2;
 				}
 
 				@include to(laptop) {
@@ -568,6 +578,7 @@
 
 				@include to(movil) {
 					padding-top: 230px;
+					background-position: top center;
 				}
 
 
@@ -577,11 +588,11 @@
 					background-image: url('/assets/background/slides/fondo1.webp');
 
 					@include to(tablet-h) {
-						background-image: url('/assets/background/slides/fondo1-T.jpg');
+						background-image: url('/assets/background/slides/fondo1-T.webp');
 					}
 
 					@include to(movil) {
-						background-image: url('/assets/background/slides/fondo1-M.png');
+						background-image: url('/assets/background/slides/fondo1-M.webp');
 					}
 				}
 
@@ -589,12 +600,12 @@
 					background-image: url('/assets/background/slides/fondo2.webp');
 
 					@include to(tablet-h) {
-						background-image: url('/assets/background/slides/fondo2-T.jpg');
+						background-image: url('/assets/background/slides/fondo2-T.webp');
 					}
 
 
 					@include to(movil) {
-						background-image: url('/assets/background/slides/fondo2-M.png');
+						background-image: url('/assets/background/slides/fondo2-M.webp');
 
 					}
 				}
@@ -603,11 +614,11 @@
 					background-image: url('/assets/background/slides/fondo3.webp');
 
 					@include to(tablet-h) {
-						background-image: url('/assets/background/slides/fondo3-T.jpg');
+						background-image: url('/assets/background/slides/fondo3-T.webp');
 					}
 
 					@include to(movil) {
-						background-image: url('/assets/background/slides/fondo3-M.png');
+						background-image: url('/assets/background/slides/fondo3-M.webp');
 					}
 
 				}
@@ -616,11 +627,11 @@
 					background-image: url('/assets/background/slides/fondo4.webp');
 
 					@include to(tablet-h) {
-						background-image: url('/assets/background/slides/fondo4-T.jpg');
+						background-image: url('/assets/background/slides/fondo4-T.webp');
 					}
 
 					@include to(movil) {
-						background-image: url('/assets/background/slides/fondo4-M.png');
+						background-image: url('/assets/background/slides/fondo4-M.webp');
 					}
 				}
 
@@ -628,11 +639,11 @@
 					background-image: url('/assets/background/slides/fondo5.webp');
 
 					@include to(tablet-h) {
-						background-image: url('/assets/background/slides/fondo5-T.jpg');
+						background-image: url('/assets/background/slides/fondo5-T.webp');
 					}
 
 					@include to(movil) {
-						background-image: url('/assets/background/slides/fondo5-M.png');
+						background-image: url('/assets/background/slides/fondo5-M.webp');
 					}
 				}
 
@@ -640,11 +651,11 @@
 					background-image: url('/assets/background/slides/fondo6.webp');
 
 					@include to(tablet-h) {
-						background-image: url('/assets/background/slides/fondo6-T.jpg');
+						background-image: url('/assets/background/slides/fondo6-T.webp');
 					}
 
 					@include to(movil) {
-						background-image: url('/assets/background/slides/fondo6-M.png');
+						background-image: url('/assets/background/slides/fondo6-M.webp');
 					}
 				}
 
@@ -701,6 +712,11 @@
 							line-height: 60px;
 							text-transform: uppercase;
 
+							@include to(tablet-h) {
+								font-size: 30px;
+								line-height: 50px;
+							}
+
 							@include to(tablet) {
 								font-size: 22px;
 								line-height: 33px;
@@ -717,26 +733,27 @@
 							}
 
 							span {
-								font: normal 700 20px $font2;
-								line-height: 25px;
+								font: normal 700 24px $font2;
+								line-height: 27px;
+								text-transform: uppercase;
 
-								@include to(tablet) {
-									font-size: 10.622px;
-									line-height: 13px;
+								@include to(tablet-h) {
+									font-size: 19px;
+									line-height: 21px;
 								}
 
 								@include to(movil) {
 									text-align: center;
 								}
 
-								&.c {
-									font-size: 30px;
+								// &.c {
+								// 	font-size: 30px;
 
-									// line-height: ;
-									@include to(tablet) {
-										font-size: 15.933px;
-									}
-								}
+								// 	// line-height: ;
+								// 	@include to(tablet) {
+								// 		font-size: 15.933px;
+								// 	}
+								// }
 							}
 
 							&.v1 {
@@ -1093,6 +1110,7 @@
 		height: fit-content;
 		width: 100%;
 		position: relative;
+		// overflow-y: visible;
 		top: -2px;
 
 		background: #006B1D;
@@ -1102,7 +1120,7 @@
 		}
 
 		@include to(movil-h) {
-			padding: 2rem;
+			padding-top: 2rem;
 		}
 
 
@@ -1137,7 +1155,7 @@
 			width: 100%;
 			background-color: #005919;
 
-			@include to(movil-h) {
+			@include to(tablet) {
 				height: 70%;
 			}
 		}
@@ -1209,10 +1227,10 @@
 					// bottom: 3%;
 
 					width: 120px;
-					height: 420px;
+					height: 540px;
 					top: auto;
-					left: -10%;
-					bottom: 7%;
+					left: 0;
+					bottom: 4%;
 					max-width: 20%;
 					// left: -50%;
 				}
@@ -1271,10 +1289,10 @@
 					// right: -9.7%;
 					// bottom: 3%;
 					width: 120px;
-					height: 420px;
+					height: 540px;
 					top: auto;
-					right: -10%;
-					bottom: 7%;
+					right: 0;
+					bottom: 4%;
 					max-width: 20%;
 				}
 			}
@@ -1351,12 +1369,12 @@
 				}
 
 				@include to(movil-h) {
-					border-radius: 20px;
-					max-width: 100%;
-
+					border-radius: 15px;
+					width: 100%;
 					margin-top: 30px;
 					width: 285px;
-					height: 433px;
+					max-width: 83%;
+					height: 480px;
 				}
 
 				&__icon {
@@ -1382,9 +1400,9 @@
 
 
 					@include to(tablet-h) {
-						width: 28.405px;
-						height: 28.405px;
-						bottom: 22px;
+						// width: 28.405px;
+						// height: 28.405px;
+						bottom: 13px;
 					}
 
 					@include to(movil-h) {

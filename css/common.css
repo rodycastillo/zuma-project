@@ -641,23 +641,28 @@ video {
   position: absolute;
   content: "";
   width: 100%;
-  height: 30%;
-  bottom: 0;
+  height: 480px;
+  bottom: -2px;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   background-image: url("/assets/background/sections/background1__bottom.png");
   background-position: top center;
   background-size: cover;
 }
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__main::after {
+    height: 420px;
+  }
+}
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main::after {
-    height: 27%;
+    height: 32%;
   }
 }
 @media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__main::after {
-    background-position: left;
+    height: 23%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -892,7 +897,12 @@ video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 1000px;
+  height: 1250px;
+}
+@media screen and (max-width: 1689px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider {
+    height: 1100px;
+  }
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider {
@@ -952,6 +962,7 @@ video {
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.active {
   opacity: 1;
+  z-index: 2;
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
@@ -976,6 +987,7 @@ video {
 @media screen and (max-width: 480px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item {
     padding-top: 230px;
+    background-position: top center;
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v1 {
@@ -983,12 +995,12 @@ video {
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v1 {
-    background-image: url("/assets/background/slides/fondo1-T.jpg");
+    background-image: url("/assets/background/slides/fondo1-T.webp");
   }
 }
 @media screen and (max-width: 480px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v1 {
-    background-image: url("/assets/background/slides/fondo1-M.png");
+    background-image: url("/assets/background/slides/fondo1-M.webp");
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v2 {
@@ -996,12 +1008,12 @@ video {
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v2 {
-    background-image: url("/assets/background/slides/fondo2-T.jpg");
+    background-image: url("/assets/background/slides/fondo2-T.webp");
   }
 }
 @media screen and (max-width: 480px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v2 {
-    background-image: url("/assets/background/slides/fondo2-M.png");
+    background-image: url("/assets/background/slides/fondo2-M.webp");
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v3 {
@@ -1009,12 +1021,12 @@ video {
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v3 {
-    background-image: url("/assets/background/slides/fondo3-T.jpg");
+    background-image: url("/assets/background/slides/fondo3-T.webp");
   }
 }
 @media screen and (max-width: 480px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v3 {
-    background-image: url("/assets/background/slides/fondo3-M.png");
+    background-image: url("/assets/background/slides/fondo3-M.webp");
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v4 {
@@ -1022,12 +1034,12 @@ video {
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v4 {
-    background-image: url("/assets/background/slides/fondo4-T.jpg");
+    background-image: url("/assets/background/slides/fondo4-T.webp");
   }
 }
 @media screen and (max-width: 480px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v4 {
-    background-image: url("/assets/background/slides/fondo4-M.png");
+    background-image: url("/assets/background/slides/fondo4-M.webp");
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v5 {
@@ -1035,12 +1047,12 @@ video {
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v5 {
-    background-image: url("/assets/background/slides/fondo5-T.jpg");
+    background-image: url("/assets/background/slides/fondo5-T.webp");
   }
 }
 @media screen and (max-width: 480px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v5 {
-    background-image: url("/assets/background/slides/fondo5-M.png");
+    background-image: url("/assets/background/slides/fondo5-M.webp");
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v6 {
@@ -1048,12 +1060,12 @@ video {
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v6 {
-    background-image: url("/assets/background/slides/fondo6-T.jpg");
+    background-image: url("/assets/background/slides/fondo6-T.webp");
   }
 }
 @media screen and (max-width: 480px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item.v6 {
-    background-image: url("/assets/background/slides/fondo6-M.png");
+    background-image: url("/assets/background/slides/fondo6-M.webp");
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main {
@@ -1124,6 +1136,12 @@ video {
   line-height: 60px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1294px) {
+  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content h2 {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
 @media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content h2 {
     font-size: 22px;
@@ -1141,26 +1159,19 @@ video {
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span {
-  font: normal 700 20px "Gotham-Bold";
-  line-height: 25px;
+  font: normal 700 24px "Gotham-Bold";
+  line-height: 27px;
+  text-transform: uppercase;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span {
-    font-size: 10.622px;
-    line-height: 13px;
+    font-size: 19px;
+    line-height: 21px;
   }
 }
 @media screen and (max-width: 480px) {
   .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span {
     text-align: center;
-  }
-}
-.portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span.c {
-  font-size: 30px;
-}
-@media screen and (max-width: 768px) {
-  .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p span.c {
-    font-size: 15.933px;
   }
 }
 .portlet[data-portlet=zuma] .section1[data-section] .section1__slider__item__main__content p.v1 {
@@ -1527,7 +1538,7 @@ video {
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section3[data-section] {
-    padding: 2rem;
+    padding-top: 2rem;
   }
 }
 .portlet[data-portlet=zuma] .section3[data-section]:after {
@@ -1560,7 +1571,7 @@ video {
   width: 100%;
   background-color: #005919;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .portlet[data-portlet=zuma] .section3[data-section]::before {
     height: 70%;
   }
@@ -1629,10 +1640,10 @@ video {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main:before {
     background-image: url("/assets/variants/resource3__left-M.png");
     width: 120px;
-    height: 420px;
+    height: 540px;
     top: auto;
-    left: -10%;
-    bottom: 7%;
+    left: 0;
+    bottom: 4%;
     max-width: 20%;
   }
 }
@@ -1690,10 +1701,10 @@ video {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main:after {
     background-image: url("/assets/variants/resource3__right-M.png");
     width: 120px;
-    height: 420px;
+    height: 540px;
     top: auto;
-    right: -10%;
-    bottom: 7%;
+    right: 0;
+    bottom: 4%;
     max-width: 20%;
   }
 }
@@ -1771,11 +1782,12 @@ video {
 }
 @media screen and (max-width: 640px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video {
-    border-radius: 20px;
-    max-width: 100%;
+    border-radius: 15px;
+    width: 100%;
     margin-top: 30px;
     width: 285px;
-    height: 433px;
+    max-width: 83%;
+    height: 480px;
   }
 }
 .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video__icon {
@@ -1800,9 +1812,7 @@ video {
 }
 @media screen and (max-width: 1294px) {
   .portlet[data-portlet=zuma] .section3[data-section] .section3__main__video__icon {
-    width: 28.405px;
-    height: 28.405px;
-    bottom: 22px;
+    bottom: 13px;
   }
 }
 @media screen and (max-width: 640px) {
